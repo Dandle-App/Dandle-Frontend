@@ -1,10 +1,11 @@
 {
   "expo": {
     "name": "Dandle",
-    "slug": "Dandle",
+    "slug": "expo.dev/@escarluka/Dandle",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "privacy": "hidden",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
