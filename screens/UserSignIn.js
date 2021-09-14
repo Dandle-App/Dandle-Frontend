@@ -1,4 +1,5 @@
 import React from "react";
+import { RNCamera } from 'react-native-camera';
 import { Text } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { 
