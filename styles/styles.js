@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import Constants from 'expo-constants';
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
@@ -8,12 +8,13 @@ export const colors = {
     background: '#630101',
     primary: '#f38484',
     secondary: '#d64547',
-    text: '#212121',
+    textLink: '#f38484',
     textLight: '#757575',
     textDark: '#212121',
+    backgroundLight: '#f5f5f5',
 };
-const { background, primary, secondary, text, 
-        textLight, textDark } = colors;
+const { background, primary, secondary, textLink, 
+        textLight, textDark, backgroundLight } = colors;
         
 //container styles
 export const StyledContainer = styled.View`
@@ -22,12 +23,17 @@ export const StyledContainer = styled.View`
     background-color: ${background};
     padding:24px;
 `
-
 export const InnerContainer = styled.View`
     flex: 1;
     width: 100%;
     align-items: center;
     padding-top: 75%;
+`
+export const LightContainer = styled.View`
+    flex: 1;
+    padding-top: ${status_bar_height}px;
+    background-color: ${backgroundLight};
+    padding:24px;
 `;
 // Gaps
 export const Padding_h_small = styled.View`
@@ -62,6 +68,7 @@ export const AppLogo = styled.Image`
     width: 66px;
     height: 77px;
 `;
+export const AppLogoRed = styled.Image`width:62px; height:73px`;
 
 //button styles
 export const StlyedButton = styled.TouchableOpacity`
