@@ -5,11 +5,11 @@ import { StyledContainer } from './styles/styles.js';
 //screens
 import Welcome from './screens/Welcome';
 import UserSignIn from './screens/UserSignIn';
+import SignIn from './screens/SignIn.js';
 
 export default function App() {
   return (
-    <UserSignIn />
-    
+    <SignIn />
   );
 }
 

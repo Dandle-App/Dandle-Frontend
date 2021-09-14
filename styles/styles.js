@@ -22,21 +22,24 @@ export const StyledContainer = styled.View`
     padding-top: ${status_bar_height}px;
     background-color: ${background};
     padding:24px;
-`
+`;
 export const InnerContainer = styled.View`
     flex: 1;
     width: 100%;
     align-items: center;
     padding-top: 75%;
-`
+`;
 export const LightContainer = styled.View`
     flex: 1;
     padding-top: ${status_bar_height}px;
     background-color: ${backgroundLight};
     padding:24px;
 `;
+export const FlexHoriztal = styled.View`
+    flexDirection: row;
+`;
 // Gaps
-export const Padding_h_small = styled.View`
+export const Pad_h_small = styled.View`
     height: 10px;
 `;
 export const Pad_h_medium = styled.View`
@@ -77,5 +80,6 @@ export const StlyedButton = styled.TouchableOpacity`
     justifyContent: space-around;
     width: 150px
     height: 50px;
+    marginHorizontal: 20px;
     border-radius: 10px;
 `;
