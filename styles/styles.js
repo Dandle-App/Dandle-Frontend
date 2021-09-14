@@ -52,6 +52,11 @@ export const Header1 = styled.Text`
     color: ${primary};
     padding-top: 42px;
 `;
+export const Header1_2 = styled.Text`
+    font-size: 20px;
+    font-weight: bold;
+    color: ${primary};
+`;
 export const Header2 = styled.Text`
     font-size: 12px;
     font-weight: bold;
@@ -66,13 +71,21 @@ export const Header3 = styled.Text`
     position: absolute;
     bottom: 0;
 `;
+//input styles
+export const InputStyle = styled.TextInput`
+    width: 66px;
+    height: 77px;
+    background-color: ${textLight};
+`;
 //img styles
 export const AppLogo = styled.Image`
     width: 66px;
     height: 77px;
 `;
-export const AppLogoRed = styled.Image`width:62px; height:73px`;
-
+export const AppLogoRed = styled.Image`
+    width:62px; 
+    height:73px
+`;
 //button styles
 export const StlyedButton = styled.TouchableOpacity`
     background-color: ${secondary};

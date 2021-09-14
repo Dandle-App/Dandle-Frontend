@@ -6,10 +6,11 @@ import { StyledContainer } from './styles/styles.js';
 import Welcome from './screens/Welcome';
 import UserSignIn from './screens/UserSignIn';
 import SignIn from './screens/SignIn.js';
+import StaffSignIn from './screens/StaffSignIn.js';
+import OrgSignIn from './screens/OrgSignIn.js';
 
 export default function App() {
   return (
-    <SignIn />
+    <OrgSignIn />
   );
 }
-
