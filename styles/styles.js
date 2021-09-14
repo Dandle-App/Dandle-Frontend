@@ -71,12 +71,6 @@ export const Header3 = styled.Text`
     position: absolute;
     bottom: 0;
 `;
-//input styles
-export const InputStyle = styled.TextInput`
-    width: 66px;
-    height: 77px;
-    background-color: ${textLight};
-`;
 //img styles
 export const AppLogo = styled.Image`
     width: 66px;
