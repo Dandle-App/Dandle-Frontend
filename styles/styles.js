@@ -37,6 +37,14 @@ export const LightContainer = styled.View`
 `;
 export const FlexHoriztal = styled.View`
     flexDirection: row;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: ${status_bar_height}px;
+`;
+export const SignUp = styled.View`
+    padding-top: ${status_bar_height}px;
+    position: absolute;
+    top: 0;
 `;
 // Gaps
 export const Pad_h_small = styled.View`
