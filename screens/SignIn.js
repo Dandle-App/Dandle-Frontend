@@ -4,29 +4,34 @@ import { StatusBar } from 'expo-status-bar';
 import { 
         StyledContainer, InnerContainer, Header1, 
         Header2, Header3, AppLogo, StlyedButton,
-        Pad_h_medium, 
-        FlexHoriztal,
-        Pad_h_small} from "../styles/styles";
+        Pad_h_medium, LightContainer, FlexHoriztal,
+        Pad_h_small, TextDark, TextLight,
+        AppLogoRed
+      } from "../styles/styles";
 
 const logo_img = require("../assets/logo_silv.png");
+const logo_img_red = require("../assets/logo_red.png")
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
-    <StyledContainer>
-      <StatusBar style="light" />
+    <LightContainer>
       <InnerContainer>
-        <AppLogo source = {logo_img}/>
+        <StatusBar style="dark" />
+        <AppLogoRed source = {logo_img_red}/>
         <Pad_h_medium/>
         <Header1>Let's get you signed in</Header1>
         <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
-        <Header1>I am a</Header1>
         <Pad_h_small />
         <FlexHoriztal>
-            <StlyedButton><Text>User</Text></StlyedButton>
-            <StlyedButton><Text>Staff</Text></StlyedButton>
+            <StlyedButton 
+              onPress={()=>navigation.navigate('UserSignIn')}
+            >
+              <TextLight>User</TextLight>
+            </StlyedButton>
+            <StlyedButton><TextLight>Staff</TextLight></StlyedButton>
         </FlexHoriztal>
       </InnerContainer>
-    </StyledContainer>
+    </LightContainer>
   );
 }
 
