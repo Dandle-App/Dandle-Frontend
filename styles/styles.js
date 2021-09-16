@@ -38,6 +38,9 @@ export const LightContainer = styled.View`
 export const FlexHoriztal = styled.View`
     flexDirection: row;
 `;
+export const FlexHoriztal = styled.View`
+    flexDirection: row;
+`;
 // Gaps
 export const Pad_h_small = styled.View`
     height: 10px;
@@ -90,8 +93,8 @@ export const StlyedButton = styled.TouchableOpacity`
     background-color: ${secondary};
     align-items: center;
     justifyContent: space-around;
-    width: 55%;
-    height: 45px;
+    width: 150px
+    height: 50px;
     marginHorizontal: 20px;
-    border-radius: 30px;
+    border-radius: 10px;
 `;
