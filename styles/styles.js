@@ -33,11 +33,16 @@ export const LightContainer = styled.View`
     flex: 1;
     padding-top: ${status_bar_height}px;
     background-color: ${backgroundLight};
-    padding:24px;
+    padding:0px;
+`;
+export const SignUpContainer = styled.View`
+    padding-top: ${status_bar_height}px;
+    width: 100%;
+    align-items: center;
+    padding: 0px;
 `;
 export const FlexHoriztal = styled.View`
     flexDirection: row;
-    bottom: 0px;
     padding-bottom: ${status_bar_height}px;
 `;
 export const SignUp = styled.View`
