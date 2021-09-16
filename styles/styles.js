@@ -9,7 +9,7 @@ export const colors = {
     primary: '#f38484',
     secondary: '#d64547',
     textLink: '#f38484',
-    textLight: '#757575',
+    textLight: '#f5f5f5',
     textDark: '#212121',
     backgroundLight: '#f5f5f5',
 };
@@ -48,6 +48,9 @@ export const FlexHoriztal = styled.View`
 export const SignUp = styled.View`
     padding-top: ${status_bar_height}px;
 `;
+export const FlexHoriztal = styled.View`
+    flexDirection: row;
+`;
 // Gaps
 export const Pad_h_small = styled.View`
     height: 10px;
@@ -80,6 +83,18 @@ export const Header3 = styled.Text`
     color: ${primary};
     position: absolute;
     bottom: 0;
+`;
+export const TextLight = styled.Text`
+    font-size: 12px;
+    font-weight: bold;
+    color: ${textLight};
+
+`;
+export const TextDark = styled.Text`
+    font-size: 12px;
+    font-weight: bold;
+    color: ${TextDark};
+
 `;
 //img styles
 export const AppLogo = styled.Image`
