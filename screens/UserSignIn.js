@@ -27,7 +27,7 @@ const UserSignIn = () => {
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
-    alert(`${data}`);
+    alert(`${data}`); //Alert until implemented as sign-in
   };
   if (hasPermission === null) {
     return <Text>Requesting for camera permission</Text>;
