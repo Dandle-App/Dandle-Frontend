@@ -35,6 +35,13 @@ export const LightContainer = styled.View`
     background-color: ${backgroundLight};
     padding:24px;
 `;
+export const PadlessContainer = styled.View`
+    flex: 1;
+    width: 100%;
+    background-color: ${backgroundLight};
+    align-items: center;
+    padding:24px;
+`;
 // Gaps
 export const Padding_h_small = styled.View`
     height: 10px;
@@ -76,6 +83,15 @@ export const StlyedButton = styled.TouchableOpacity`
     align-items: center;
     justifyContent: space-around;
     width: 150px
+    height: 50px;
+    border-radius: 10px;
+`;
+export const ScanButton = styled.TouchableOpacity`
+    background-color: ${secondary};
+    color= ${textLight};
+    align-items: center;
+    justifyContent: space-around;
+    width: 150px;
     height: 50px;
     border-radius: 10px;
 `;
