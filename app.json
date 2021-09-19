@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Dandle",
-    "slug": "expo.dev/@escarluka/Dandle",
+    "slug": "expo.dev\\@escarluka\\Dandle",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo_red.png",
