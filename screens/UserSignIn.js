@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
+import { Text } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { 
@@ -12,6 +13,11 @@ How to:
 https://reactnativemaster.com/react-native-qr-code-scanner-using-expo/
 */
 const logo_img = require("../assets/logo_red.png");
+        Header2, Header3, AppLogo, StlyedButton,
+        Pad_h_medium,AppLogoRed 
+      } from "../styles/styles";
+
+const logo_img_red = require("../assets/logo_red.png");
 
 
 const UserSignIn = () => {
@@ -54,6 +60,7 @@ const UserSignIn = () => {
            </ScanButton>}
       </InnerContainer>
       <Pad_h_medium/>
+        </InnerContainer>
     </LightContainer>
   );
 }

@@ -9,7 +9,7 @@ export const colors = {
     primary: '#f38484',
     secondary: '#d64547',
     textLink: '#f38484',
-    textLight: '#757575',
+    textLight: '#f5f5f5',
     textDark: '#212121',
     backgroundLight: '#f5f5f5',
 };
@@ -22,18 +22,21 @@ export const StyledContainer = styled.View`
     padding-top: ${status_bar_height}px;
     background-color: ${background};
     padding:24px;
-`
+`;
 export const InnerContainer = styled.View`
     flex: 1;
     width: 100%;
     align-items: center;
     padding-top: 75%;
-`
+`;
 export const LightContainer = styled.View`
     flex: 1;
-    padding-top: ${status_bar_height}px;
-    background-color: ${backgroundLight};
-    padding:24px;
+    width: 100%;
+    align-items: center;
+    padding-top: 0%;
+`;
+export const FlexHoriztal = styled.View`
+    flexDirection: row;
 `;
 export const PadlessContainer = styled.View`
     flex: 1;
@@ -43,7 +46,7 @@ export const PadlessContainer = styled.View`
     padding:24px;
 `;
 // Gaps
-export const Padding_h_small = styled.View`
+export const Pad_h_small = styled.View`
     height: 10px;
 `;
 export const Pad_h_medium = styled.View`
@@ -69,6 +72,18 @@ export const Header3 = styled.Text`
     color: ${primary};
     position: absolute;
     bottom: 0;
+`;
+export const TextLight = styled.Text`
+    font-size: 12px;
+    font-weight: bold;
+    color: ${textLight};
+
+`;
+export const TextDark = styled.Text`
+    font-size: 12px;
+    font-weight: bold;
+    color: ${TextDark};
+
 `;
 //img styles
 export const AppLogo = styled.Image`
