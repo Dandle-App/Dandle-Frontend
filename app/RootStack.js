@@ -22,7 +22,7 @@ const RootStack = () => {
             >
                 <Stack.Screen name="Welcome" component={Welcome} />
                 <Stack.Screen name="SignIn" component={SignIn} />
-                <Stack.Screen name="UserSignIn" component={SignIn} />
+                <Stack.Screen name="UserSignIn" component={UserSignIn} />
             </Stack.Navigator>
         </NavigationContainer>
       );
