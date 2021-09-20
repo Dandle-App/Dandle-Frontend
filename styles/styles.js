@@ -43,6 +43,13 @@ export const FlexHoriztal = styled.View`
 export const SignUp = styled.View`
     padding-top: ${status_bar_height}px;
 `;
+export const PadlessContainer = styled.View`
+    flex: 1;
+    width: 100%;
+    background-color: ${backgroundLight};
+    align-items: center;
+    padding:24px;
+`;
 // Gaps
 export const Pad_h_small = styled.View`
     height: 10px;
@@ -102,8 +109,16 @@ export const StlyedButton = styled.TouchableOpacity`
     background-color: ${secondary};
     align-items: center;
     justifyContent: space-around;
-    width: 55%;
-    height: 45px;
-    marginHorizontal: 20px;
-    border-radius: 30px;
+    width: 150px
+    height: 50px;
+    border-radius: 10px;
+`;
+export const ScanButton = styled.TouchableOpacity`
+    background-color: ${secondary};
+    color= ${textLight};
+    align-items: center;
+    justifyContent: space-around;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
 `;

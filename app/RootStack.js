@@ -28,8 +28,6 @@ const RootStack = () => {
                 <Stack.Screen name="Welcome" component={Welcome} />
                 <Stack.Screen name="SignIn" component={SignIn} />
                 <Stack.Screen name="UserSignIn" component={UserSignIn} />
-                <Stack.Screen name="StaffSignIn" component={StaffSignIn} />
-                <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
             </Stack.Navigator>
         </NavigationContainer>
       );
