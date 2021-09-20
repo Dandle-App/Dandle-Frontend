@@ -1,14 +1,16 @@
-import { KeyboardAvoidingView, keyboard, ScrollView,
-            TouchableWithoutFeedback} from "react-native";
+import React from "react";
+import { KeyboardAvoidingView, Keyboard, ScrollView, TouchableWithoutFeedback } from "react-native"
 
 const KeyboardAvoidingWrapper = (props) => {
-    return (
+    return(
         <KeyboardAvoidingView>
             <ScrollView>
-                <TouchableWithoutFeedback onPress={keyboard.dismiss}>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     {props.children}
                 </TouchableWithoutFeedback>
             </ScrollView>
         </KeyboardAvoidingView>
-    );
+    )
 }
+
+export default KeyboardAvoidingWrapper;

@@ -37,6 +37,11 @@ export const LightContainer = styled.View`
 `;
 export const FlexHoriztal = styled.View`
     flexDirection: row;
+    bottom: 0px;
+    padding-bottom: ${status_bar_height}px;
+`;
+export const SignUp = styled.View`
+    padding-top: ${status_bar_height}px;
 `;
 export const PadlessContainer = styled.View`
     flex: 1;
@@ -58,6 +63,11 @@ export const Header1 = styled.Text`
     font-weight: bold;
     color: ${primary};
     padding-top: 42px;
+`;
+export const Header1_2 = styled.Text`
+    font-size: 20px;
+    font-weight: bold;
+    color: ${primary};
 `;
 export const Header2 = styled.Text`
     font-size: 12px;
@@ -90,8 +100,10 @@ export const AppLogo = styled.Image`
     width: 66px;
     height: 77px;
 `;
-export const AppLogoRed = styled.Image`width:62px; height:73px`;
-
+export const AppLogoRed = styled.Image`
+    width:62px; 
+    height:73px
+`;
 //button styles
 export const StlyedButton = styled.TouchableOpacity`
     background-color: ${secondary};

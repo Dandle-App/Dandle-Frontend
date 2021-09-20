@@ -1,12 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StyleSheet, Text, View } from 'react-native';
 
 //screens
 import Welcome from '../screens/Welcome';
 import SignIn from '../screens/SignIn';
+
 import UserSignIn from '../screens/UserSignIn.js';
+
+import StaffSignIn from '../screens/StaffSignIn';
+
+import OrgSignIn from '../screens/OrgSignIn';
+import OrgSignUp from '../screens/OrgSignUp';
 
 const Stack = createStackNavigator();
 const RootStack = () => {
@@ -22,7 +27,7 @@ const RootStack = () => {
             >
                 <Stack.Screen name="Welcome" component={Welcome} />
                 <Stack.Screen name="SignIn" component={SignIn} />
-                <Stack.Screen name="UserSignIn" component={SignIn} />
+                <Stack.Screen name="UserSignIn" component={UserSignIn} />
             </Stack.Navigator>
         </NavigationContainer>
       );
