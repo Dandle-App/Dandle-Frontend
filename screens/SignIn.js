@@ -22,8 +22,16 @@ const SignIn = () => {
         <Header1>I am a</Header1>
         <Pad_h_small />
         <FlexHoriztal>
-            <StlyedButton><Text>User</Text></StlyedButton>
-            <StlyedButton><Text>Staff</Text></StlyedButton>
+            <StlyedButton 
+              onPress={()=>navigation.navigate('UserSignIn')}
+            >
+              <TextLight>User</TextLight>
+            </StlyedButton>
+            <StlyedButton 
+              onPress={()=>navigation.navigate('StaffSignIn')}
+            >
+              <TextLight>Staff</TextLight>
+            </StlyedButton>
         </FlexHoriztal>
       </InnerContainer>
     </StyledContainer>

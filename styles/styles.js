@@ -43,8 +43,13 @@ export const FlexHoriztal = styled.View`
 export const SignUp = styled.View`
     padding-top: ${status_bar_height}px;
 `;
-export const FlexHoriztal = styled.View`
-    flexDirection: row;
+export const PadlessContainer = styled.View`
+    flex: 1;
+    width: 100%;
+    background-color: ${backgroundLight};
+    align-items: center;
+    padding: 24px;
+    paddingTop:25%;
 `;
 // Gaps
 export const Pad_h_small = styled.View`
@@ -76,8 +81,6 @@ export const Header3 = styled.Text`
     font-size: 12px;
     font-weight: bold;
     color: ${primary};
-    position: absolute;
-    bottom: 0;
 `;
 export const TextLight = styled.Text`
     font-size: 12px;
@@ -107,6 +110,18 @@ export const StlyedButton = styled.TouchableOpacity`
     justifyContent: space-around;
     width: 150px
     height: 50px;
+<<<<<<< HEAD
     marginHorizontal: 20px;
+=======
+    border-radius: 10px;
+`;
+export const ScanButton = styled.TouchableOpacity`
+    background-color: ${secondary};
+    color= ${textLight};
+    align-items: center;
+    justifyContent: space-around;
+    width: 150px;
+    height: 50px;
+>>>>>>> Sprint01
     border-radius: 10px;
 `;
