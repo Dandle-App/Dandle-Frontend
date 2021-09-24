@@ -82,7 +82,6 @@ export const Header3 = styled.Text`
     font-weight: bold;
     color: ${primary};
 `;
-<<<<<<< HEAD
 export const TextLight = styled.Text`
     font-size: 12px;
     font-weight: bold;
@@ -95,8 +94,6 @@ export const TextDark = styled.Text`
     color: ${TextDark};
 
 `;
-=======
->>>>>>> Created OrgSignUp.js
 //img styles
 export const AppLogo = styled.Image`
     width: 66px;
