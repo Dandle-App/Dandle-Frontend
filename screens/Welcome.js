@@ -9,6 +9,7 @@ import {
         Header2, Header3, AppLogo, StlyedButton,
         Pad_h_medium, 
         LightContainer} from "../styles/styles";
+import { TextLink } from "../components/atoms/Atoms";
 
 const logo_img = require("../assets/logo_silv.png");
 const logo_img_red = require("../assets/logo_red.png");
@@ -30,8 +31,10 @@ const Welcome = ({navigation}) => {
           >
             <Text>Continue</Text>
           </StlyedButton>
-
-          <Header3>I am an organization/company</Header3>
+          <Pad_h_medium/>
+          <TextLink onPress={()=>navigation.navigate("OrgSignUp")}>
+            <Header3>I am an organization/company</Header3>
+          </TextLink>
         </InnerContainer>
 
         <LightContainer>
@@ -40,6 +43,7 @@ const Welcome = ({navigation}) => {
             source = {how_it_works}
             resizeMode = "cover"
             shouldPlay = {true}
+            isMuted = {true}
             style = { {width: "100%", height: "45%", zIndex: 2, borderRadius:10} }
             isLooping
           />
@@ -49,8 +53,9 @@ const Welcome = ({navigation}) => {
           >
             <Text>Continue</Text>
           </StlyedButton>
-        
-          <Header3>I am an organization/company</Header3>
+          <TextLink onPress={()=>navigation.navigate("OrgSignUp")}>
+            <Header3>I am an organization/company</Header3>
+          </TextLink>
         </LightContainer>
       </Swiper>
     </StyledContainer>
