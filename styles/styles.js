@@ -48,7 +48,8 @@ export const PadlessContainer = styled.View`
     width: 100%;
     background-color: ${backgroundLight};
     align-items: center;
-    padding:24px;
+    padding: 24px;
+    paddingTop:25%;
 `;
 // Gaps
 export const Pad_h_small = styled.View`
@@ -80,8 +81,6 @@ export const Header3 = styled.Text`
     font-size: 12px;
     font-weight: bold;
     color: ${primary};
-    position: absolute;
-    bottom: 0;
 `;
 <<<<<<< HEAD
 export const TextLight = styled.Text`

@@ -7,12 +7,13 @@ import {
         Pad_h_medium, 
         FlexHoriztal,
         Pad_h_small,
-        InputStyle,
         Header1_2} from "../styles/styles";
+import { TextLink } from "../components/atoms/Atoms";
+import { NavigationContainer } from "@react-navigation/native";
 
 const logo_img = require("../assets/logo_silv.png");
 
-const StaffSignIn = () => {
+const StaffSignIn = ({navigation}) => {
   return (
     <StyledContainer>
       <StatusBar style="light" />
@@ -23,7 +24,13 @@ const StaffSignIn = () => {
         <TextInput style={{backgroundColor: "white", width:200, height:40}}/>
         <Header1_2>password</Header1_2>
         <TextInput style={{backgroundColor: "white", width:200, height:40}}/>
-        <Header3>Don't have an account? Registar</Header3>
+        <FlexHoriztal>
+          <Header2>Don't have an account?</Header2>
+          <TextLink onPress={()=>navigation.navigate("StaffSignUp")}>
+            <Text>Register</Text>
+          </TextLink>
+        </FlexHoriztal>
+        
       </InnerContainer>
     </StyledContainer>
   );

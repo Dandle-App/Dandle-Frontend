@@ -9,7 +9,7 @@ import { StyledContainer, InnerContainer, Header1,
         Header1_2, InputTextContainer, SignUp} from "../styles/styles";
 
 
-const OrgSignUp = () => {
+const OrgSignUp = ({navigation}) => {
   return (
     <KeyboardAvoidingWrapper>
       <StyledContainer>
