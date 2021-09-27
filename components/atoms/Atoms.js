@@ -33,9 +33,9 @@ export const RightIcon = styled.TouchableOpacity`
     z-index: 1;
 `;
 export const TextLink = styled.TouchableOpacity`
-    justify-content: center;
     align-items: center;
     color: ${textLink};
+    paddingLeft: 5px;
 `;
 
 //Views
