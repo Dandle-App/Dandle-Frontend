@@ -1,41 +1,123 @@
 import React from "react";
+import { View,Text } from "react-native";
 import KeyboardAvoidingWrapper from "../components/organisms/KeyboardAvoidingWrapper";
-import { Text, TextInput, View } from "react-native";
+import { Formik, Form } from "formik";
 import { StatusBar } from 'expo-status-bar';
-import { StyledContainer, InnerContainer, Header1, 
-        Header2, Header3, AppLogo, StlyedButton,
-        Pad_h_medium, FlexHoriztal, Pad_h_small,
-        Header1_2, InputTextContainer, SignUp, LightContainer, SignUpContainer} from "../styles/styles";
+import { LightContainer, InnerContainer, PadlessContainer,
+        Header1, Header2, TextLight, 
+        AppLogoRed, StlyedButton,
+        Pad_h_medium, FlexHoriztal, Pad_h_small} from "../styles/styles";
+
+import { StyldTextInput } from "../components/molecules/Molecules";
+import { StyledFormArea } from "../components/organisms/Organisms";
+import axios from "axios";
+
+const logo_img = require("../assets/logo_red.png");
 
 
 const OrgSignUp = ({navigation}) => {
+  //write a handleSubmit function
+  const handleSubmit = (values) => {
+    values = {companyName: "Dandle Group", companyEmail: "dandle@msudenver.edu", companyPhoneNumber: "303", orgCode: "dandle",
+              password: "dandle", address: "777 Lawrence St.", city: "Denver",
+              state: "CO", country: "United States", zipCode: "80204"}
+    console.log(values);
+    const url = "http://localhost:5000/v1/orgs/signup";
+    axios.post(url, values)
+    .then(res => {
+        console.log(res);
+    })
+  }
   return (
     <KeyboardAvoidingWrapper>
-    <StyledContainer>
-      <StatusBar style="light" />
-      <SignUpContainer>
-        <SignUp>
-          <Header1_2>Company Name</Header1_2>
-          <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-          <Header1_2>Company Email</Header1_2>
-          <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-          <Header1_2>Company Phone Number</Header1_2>
-          <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-          <Header1_2>Org Code</Header1_2>
-          <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-          <Header1_2>Password</Header1_2>
-          <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-          <Header1_2>Cofirm Password</Header1_2>
-          <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-        </SignUp>
-        <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
-        <FlexHoriztal>
-            <StlyedButton><Text>Capcha</Text></StlyedButton>
-            <StlyedButton><Text>Sign Up</Text></StlyedButton>
-        </FlexHoriztal>
-      </SignUpContainer>
-    </StyledContainer>
-  </KeyboardAvoidingWrapper>    
+    <LightContainer>
+        <StatusBar style="dark" />
+        <PadlessContainer>
+            <Formik
+                initialValues={{
+                    companyName: "",
+                    companyEmail: "",
+                    companyPhoneNumber: "",
+                    orgCode: "",
+                    password: "",
+                    confirmPassword: "",
+                    address: "",
+                    city: "",
+                    state: "",
+                    country: "",
+                    zipCode: ""
+                }}
+                onSubmit={(values) => {
+                  // navigate somwhere
+                  handleSubmit(values);
+                }}
+            >
+                {
+                    ({handleChange, handleBlur, handleSubmit, values}) => (
+                        <StyledFormArea>
+                            <StyldTextInput
+                                label="Company Name"
+                                placeholder="John Doe"
+                            />
+                            <StyldTextInput
+                                label="Company Email"
+                                placeholder="johndoe@acme.com"
+                                keyboardType="email-address"
+                            />
+                            <StyldTextInput
+                                label="Company Phone No"
+                                placeholder="303 309 9200"
+                            />
+                            <StyldTextInput
+                                label="Org Code"
+                                placeholder="ACME101"
+                                autoCapitalize="characters"
+                            />
+                            <StyldTextInput
+                                label="Password"
+                                placeholder="* * * * * * *"
+                                secureTextEntry={true}
+                            />
+                            <StyldTextInput
+                                label="Confirm Password"
+                                placeholder="* * * * * * *"
+                                secureTextEntry={true}
+                            />
+                            <StyldTextInput
+                                label="Address"
+                                placeholder="123 Main St"
+                            />
+                            <FlexHoriztal>
+                              <StyldTextInput
+                                  label="City"
+                                  placeholder="Denver"
+                              />
+                              <StyldTextInput
+                                  label="State"
+                                  placeholder="CO"
+                              />
+                            </FlexHoriztal>
+                            <FlexHoriztal>
+                              <StyldTextInput
+                                  label="Country"
+                                  placeholder="United States"
+                              />
+                              <StyldTextInput
+                                  label="Zip Code"
+                                  placeholder="90210"
+                              />
+                            </FlexHoriztal>
+                            
+                            <StlyedButton onPress={handleSubmit}>
+                                <TextLight>sign up</TextLight>
+                            </StlyedButton>
+                        </StyledFormArea>
+                    )
+                }
+            </Formik>    
+        </PadlessContainer>
+    </LightContainer>
+</KeyboardAvoidingWrapper>
   );
 }
 
