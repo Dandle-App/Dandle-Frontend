@@ -4,7 +4,7 @@ import KeyboardAvoidingWrapper from "../components/organisms/KeyboardAvoidingWra
 import { Formik, Form } from "formik";
 import { StatusBar } from 'expo-status-bar';
 import { LightContainer, InnerContainer, PadlessContainer,
-        Header1, Header2, Header3, 
+        Header1, Header2, TextLight, 
         AppLogoRed, StlyedButton,
         Pad_h_medium, FlexHoriztal, Pad_h_small} from "../styles/styles";
 
@@ -25,6 +25,7 @@ const StaffSignUp = ({navigation}) => {
             console.log(res);
         })
     }
+    const focusInputText = (e) => {e.target.borderColor = '#000000'}
     return (
         <KeyboardAvoidingWrapper>
             <LightContainer>
@@ -45,24 +46,26 @@ const StaffSignUp = ({navigation}) => {
                         }}
                     >
                         {
-                            ({handleChange, handleBlur, handleSubmit, values}) =>
+                            ({handleChange, handleBlur, handleSubmit, values}) => (
                                 <StyledFormArea>
                                     <StyldTextInput
                                         label="full name"
                                         placeholder="John Doe"
-                                        />
+                                    />
                                     <StyldTextInput
                                         label="email"
-                                        placeholder="johndoe@email.com"
+                                        placeholder="johndoe@acme.com"
                                         keyboardType="email-address"
                                     />
                                     <StyldTextInput
                                         label="password"
                                         placeholder="* * * * * * *"
+                                        secureTextEntry={true}
                                     />
                                     <StyldTextInput
                                         label="confirm password"
                                         placeholder="* * * * * * *"
+                                        secureTextEntry={true}
                                     />
                                     <StyldTextInput
                                         label="company/org code"
@@ -76,9 +79,10 @@ const StaffSignUp = ({navigation}) => {
                                     <StlyedButton
                                         onPress={handleSubmit}
                                     >
-                                        <Text>sign up</Text>
+                                        <TextLight>sign up</TextLight>
                                     </StlyedButton>
                                 </StyledFormArea>
+                            )
                         }
                     </Formik>    
                 </PadlessContainer>
