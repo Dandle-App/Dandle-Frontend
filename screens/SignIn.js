@@ -4,13 +4,13 @@ import { StatusBar } from 'expo-status-bar';
 import { 
         StyledContainer, InnerContainer, Header1, 
         Header2, Header3, AppLogo, StlyedButton,
-        Pad_h_medium, 
+        Pad_h_medium, TextLight,
         FlexHoriztal,
         Pad_h_small} from "../styles/styles";
 
 const logo_img = require("../assets/logo_silv.png");
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <StyledContainer>
       <StatusBar style="light" />

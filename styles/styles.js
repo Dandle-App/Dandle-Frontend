@@ -115,9 +115,6 @@ export const StlyedButton = styled.TouchableOpacity`
     justifyContent: space-around;
     width: 150px
     height: 50px;
-<<<<<<< HEAD
-    marginHorizontal: 20px;
-=======
     border-radius: 10px;
 `;
 export const ScanButton = styled.TouchableOpacity`
@@ -127,6 +124,5 @@ export const ScanButton = styled.TouchableOpacity`
     justifyContent: space-around;
     width: 150px;
     height: 50px;
->>>>>>> Sprint01
     border-radius: 10px;
 `;
