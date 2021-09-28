@@ -18,8 +18,7 @@ const SignIn = ({navigation}) => {
         <AppLogo source = {logo_img}/>
         <Pad_h_medium/>
         <Header1>Let's get you signed in</Header1>
-        <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
-        <Header1>I am a</Header1>
+        <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
         <Pad_h_small />
         <FlexHoriztal>
             <StlyedButton 
