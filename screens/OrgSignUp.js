@@ -48,7 +48,7 @@ const OrgSignUp = ({navigation}) => {
                     zipCode: ""
                 }}
                 onSubmit={(values) => {
-                  // navigate somwhere
+                  navigation.navigate("OrgSignIn");
                   handleSubmit(values);
                 }}
             >
@@ -107,10 +107,11 @@ const OrgSignUp = ({navigation}) => {
                                   placeholder="90210"
                               />
                             </FlexHoriztal>
-                            
-                            <StlyedButton onPress={handleSubmit}>
-                                <TextLight>sign up</TextLight>
-                            </StlyedButton>
+                            <FlexHoriztal>
+                                <StlyedButton onPress={handleSubmit}>
+                                    <TextLight>sign up</TextLight>
+                                </StlyedButton>
+                            </FlexHoriztal>
                         </StyledFormArea>
                     )
                 }
