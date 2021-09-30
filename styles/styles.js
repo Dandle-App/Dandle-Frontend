@@ -43,6 +43,8 @@ export const SignUpContainer = styled.View`
 `;
 export const FlexHoriztal = styled.View`
     flexDirection: row;
+    align-items: center;
+    justifyContent: space-around;
     padding-bottom: ${status_bar_height}px;
 `;
 export const SignUp = styled.View`
