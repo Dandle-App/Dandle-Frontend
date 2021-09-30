@@ -17,15 +17,17 @@ const logo_img = require("../assets/logo_red.png");
 const StaffSignUp = ({navigation}) => {
     //write a handleSubmit function
     const handleSubmit = (values) => {
-        values = {fullname: 'Mbami Luka', email: 'mluka@msu.com', phone: '303'}
+        
         console.log(values);
-        const url = "http://localhost:5000/v1/staff/signup";
+        const url = "http://localhost:3000/v1/staff/signup";
         axios.post(url, values)
         .then(res => {
             console.log(res);
         })
+        .catch(err => {
+            console.log(err);
+        });
     }
-    const focusInputText = (e) => {e.target.borderColor = '#000000'}
     return (
         <KeyboardAvoidingWrapper>
             <LightContainer>
@@ -51,30 +53,39 @@ const StaffSignUp = ({navigation}) => {
                                     <StyldTextInput
                                         label="full name"
                                         placeholder="John Doe"
+                                        onChangeText={handleChange("fullName")}
+                                        value={values.fullName}
                                     />
                                     <StyldTextInput
                                         label="email"
                                         placeholder="johndoe@acme.com"
                                         keyboardType="email-address"
+                                        onChangeText={handleChange('email')}
+                                        value={values.email}
                                     />
                                     <StyldTextInput
                                         label="password"
                                         placeholder="* * * * * * *"
                                         secureTextEntry={true}
+                                        value={values.password}
+                                        onChangeText={handleChange('password')}
                                     />
                                     <StyldTextInput
                                         label="confirm password"
                                         placeholder="* * * * * * *"
                                         secureTextEntry={true}
+                                        onChangeText={handleChange('confirmPassword')}
                                     />
                                     <StyldTextInput
                                         label="company/org code"
                                         placeholder="ACME101"
                                         autoCapitalize="characters"
+                                        onChangeText={handleChange('orgCode')}
                                     />
                                     <StyldTextInput
                                         label="phone no."
                                         placeholder="303 309 9200"
+                                        onChangeText={handleChange('phone')}
                                     />
                                     <StlyedButton
                                         onPress={handleSubmit}

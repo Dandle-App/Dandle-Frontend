@@ -22,7 +22,7 @@ const OrgSignUp = ({navigation}) => {
               password: "dandle", address: "777 Lawrence St.", city: "Denver",
               state: "CO", country: "United States", zipCode: "80204"}
     console.log(values);
-    const url = "http://localhost:5000/v1/orgs/signup";
+    const url = "http://localhost:3000/v1/orgs/signup";
     axios.post(url, values)
     .then(res => {
         console.log(res);
@@ -58,6 +58,7 @@ const OrgSignUp = ({navigation}) => {
                             <StyldTextInput
                                 label="Company Name"
                                 placeholder="John Doe"
+                                onChangeText={handleChange('name')}
                             />
                             <StyldTextInput
                                 label="Company Email"
