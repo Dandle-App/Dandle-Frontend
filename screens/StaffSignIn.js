@@ -22,13 +22,13 @@ const StaffSignIn = ({navigation}) => {
         <StatusBar style="dark" />
         <PadlessContainer>
           <AppLogo source = {logo_img}/>
-          <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
-          <Pad_h_medium/><Pad_h_small/><Pad_h_small/>
+          <Pad_h_medium/>
           <Header1>username</Header1>
           <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
           <Header1_2>password</Header1_2>
           <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
-          <Pad_h_medium/>
+          <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
+          <Pad_h_medium/><Pad_h_small/><Pad_h_small/>
           <StlyedButton><TextLight>Sign in</TextLight></StlyedButton>
           <Pad_h_small/>
           <FlexHoriztal>
@@ -37,7 +37,6 @@ const StaffSignIn = ({navigation}) => {
               <Header2>Register</Header2>
             </TextLink>
           </FlexHoriztal>
-          
         </PadlessContainer>
       </LightContainer>
     </KeyboardAvoidingWrapper>
