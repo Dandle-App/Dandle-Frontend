@@ -49,7 +49,7 @@ const StaffSignUp = ({navigation}) => {
                     >
                         {
                             ({handleChange, handleBlur, handleSubmit, values}) => (
-                                <StyledFormArea>
+                                <StyledFormArea >
                                     <StyldTextInput
                                         label="full name"
                                         placeholder="John Doe"
@@ -92,6 +92,7 @@ const StaffSignUp = ({navigation}) => {
                                     >
                                         <TextLight>sign up</TextLight>
                                     </StlyedButton>
+                                    
                                 </StyledFormArea>
                             )
                         }

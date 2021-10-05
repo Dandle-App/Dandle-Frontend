@@ -6,7 +6,7 @@ import {
         Header2, Header3, AppLogo, StlyedButton,
         Pad_h_medium, TextLight,
         FlexHoriztal,
-        Pad_h_small} from "../styles/styles";
+        Pad_h_small, Pad_w_small} from "../styles/styles";
 
 const logo_img = require("../assets/logo_silv.png");
 
@@ -23,11 +23,13 @@ const SignIn = ({navigation}) => {
         <FlexHoriztal>
             <StlyedButton 
               onPress={()=>navigation.navigate('UserSignIn')}
+              width='45%'
             >
               <TextLight>User</TextLight>
-            </StlyedButton>
+            </StlyedButton><Pad_w_small/>
             <StlyedButton 
               onPress={()=>navigation.navigate('StaffSignIn')}
+              width='45%'
             >
               <TextLight>Staff</TextLight>
             </StlyedButton>
