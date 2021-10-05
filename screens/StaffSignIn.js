@@ -16,6 +16,8 @@ import axios from "axios";
 const logo_img = require("../assets/logo_red.png");
 
 const StaffSignIn = ({navigation}) => {
+  [message, setMessage] = React.useState("");
+  [messageStatus, setMessageStatus] = React.useState("");
   const handleSubmit = (values) => {
         
     console.log(values);
@@ -23,10 +25,23 @@ const StaffSignIn = ({navigation}) => {
     axios.post(url, values)
     .then(res => {
         const response = res.data;
+        const {message, status} = response;
+
+        if(status === "200"){
+            setMessageStatus("sign in successful");
+            setMessage(message);
+            () => navigation.navigate("Welcome");
+        }else{
+            setMessageStatus("sign in failed");
+            setMessage(message);
+        }
     })
     .catch(err => {
-        console.log(err);
+      setMessage("Oops! Check network connection and try again");
+      console.log(err);
+      console.log(message)
     });
+  //
 }
   return (
     <KeyboardAvoidingWrapper>
@@ -40,7 +55,6 @@ const StaffSignIn = ({navigation}) => {
                         password: "",
                     }}
                     onSubmit={(values) => {
-                        navigation.navigate("StaffSignUp");
                         handleSubmit(values);
                     }}
                 >
@@ -67,7 +81,7 @@ const StaffSignIn = ({navigation}) => {
                                 </StlyedButton><Pad_h_small />
                                 <FlexHoriztal justify='center'>
                                   <Header2>Don't have an account?</Header2>
-                                  <TextLink onPress={handleSubmit}>
+                                  <TextLink onPress={()=> navigation.navigate('StaffSignUp')}>
                                     <Header2>Register</Header2>
                                   </TextLink>
                                 </FlexHoriztal>
