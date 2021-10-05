@@ -28,7 +28,7 @@ const OrgSignIn = ({navigation}) => {
           <TextInput style={{backgroundColor: "white", width:300, height:40}}/>
           <Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/><Pad_h_medium/>
           <Pad_h_medium/><Pad_h_small/><Pad_h_small/>
-          <StlyedButton><TextLight>Sign in</TextLight></StlyedButton>
+          <StlyedButton width='90%'><TextLight>Sign in</TextLight></StlyedButton>
           <Pad_h_small/>
           <FlexHoriztal>
             <Header2>Don't have an account?</Header2>

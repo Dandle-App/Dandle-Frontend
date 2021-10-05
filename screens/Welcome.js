@@ -28,6 +28,7 @@ const Welcome = ({navigation}) => {
 
           <StlyedButton 
             onPress={()=>navigation.navigate('SignIn')}
+            width='90%'
           >
             <Text>Continue</Text>
           </StlyedButton>
@@ -50,6 +51,7 @@ const Welcome = ({navigation}) => {
           <Pad_h_medium/><Pad_h_medium/>
           <StlyedButton 
             onPress={()=>navigation.navigate('SignIn')}
+            width='100%'
           >
             <Text>Continue</Text>
           </StlyedButton>

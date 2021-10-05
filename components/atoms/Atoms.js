@@ -13,7 +13,8 @@ export const TextInputField = styled.TextInput`
     borderBottomWidth: 3px;
     borderColor: #d3d3d3;
     padding: 10px;
-    marginBottom: 20px;
+    paddingTop: 5px;
+    marginBottom: 35px;
     color: ${textDark};
 `;
 
@@ -22,6 +23,7 @@ export const StyledInputLabel = styled.Text`
     color: ${primary};
     font-size: 16px;
     padding: 5px;
+    padding-bottom: 0px;
     text-align: left;
 `;
 

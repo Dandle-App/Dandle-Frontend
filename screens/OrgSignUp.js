@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 import { LightContainer, InnerContainer, PadlessContainer,
         Header1, Header2, TextLight, 
         AppLogoRed, StlyedButton,
-        Pad_h_medium, FlexHoriztal, Pad_h_small} from "../styles/styles";
+        Pad_h_medium, FlexHoriztal, Pad_h_small, Pad_w_small} from "../styles/styles";
 
 import { StyldTextInput } from "../components/molecules/Molecules";
 import { StyledFormArea } from "../components/organisms/Organisms";
@@ -105,7 +105,7 @@ const OrgSignUp = ({navigation}) => {
                                     placeholder="Denver"
                                     onChangeText={handleChange("city")}
                                     value={values.city}
-                                />
+                                /><Pad_w_small/>
                                 <StyldTextInput
                                     label="State"
                                     placeholder="CO"
@@ -119,7 +119,7 @@ const OrgSignUp = ({navigation}) => {
                                     placeholder="United States"
                                     onChangeText={handleChange("country")}
                                     value={values.country}
-                                />
+                                /><Pad_w_small/>
                                 <StyldTextInput
                                     label="Zip Code"
                                     placeholder="90210"
@@ -128,7 +128,7 @@ const OrgSignUp = ({navigation}) => {
                                 />
                                 </FlexHoriztal>
                                 <FlexHoriztal>
-                                    <StlyedButton onPress={handleSubmit}>
+                                    <StlyedButton onPress={handleSubmit} width='100%'>
                                         <TextLight>sign up</TextLight>
                                     </StlyedButton>
                                 </FlexHoriztal>
