@@ -19,10 +19,17 @@ const StaffSignUp = ({navigation}) => {
     const handleSubmit = (values) => {
         
         console.log(values);
-        const url = "http://localhost:3000/v1/staff/signup";
+        const url = "http://192.168.1.68:3000/signup/staff";
         axios.post(url, values)
         .then(res => {
-            console.log(res);
+            const response = res.data;
+            const {message, status} = response;
+            console.log(response);
+            if(status === "200"){
+                setMessageStatus(status);
+                setMessage("sign in successful");
+                () => navigation.navigate("Welcome");
+            }
         })
         .catch(err => {
             console.log(err);
@@ -43,13 +50,12 @@ const StaffSignUp = ({navigation}) => {
                             orgCode: ""
                         }}
                         onSubmit={(values) => {
-                            navigation.navigate("StaffSignIn");
-                            handleSubmit(values);
+                            {handleSubmit(values)};
                         }}
                     >
                         {
                             ({handleChange, handleBlur, handleSubmit, values}) => (
-                                <StyledFormArea>
+                                <StyledFormArea >
                                     <StyldTextInput
                                         label="full name"
                                         placeholder="John Doe"
@@ -92,6 +98,7 @@ const StaffSignUp = ({navigation}) => {
                                     >
                                         <TextLight>sign up</TextLight>
                                     </StlyedButton>
+                                    
                                 </StyledFormArea>
                             )
                         }
