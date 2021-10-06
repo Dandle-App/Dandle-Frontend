@@ -26,6 +26,12 @@ export const StyledInputLabel = styled.Text`
     padding-bottom: 0px;
     text-align: left;
 `;
+export const MsgBox = styled.Text`
+  text-align: center;
+  font-size: 13px;
+  padding: 3px;
+  color: ${props => props.type == "success" ? 'green' : 'red'};
+`;
 
 //buttons and links
 export const RightIcon = styled.TouchableOpacity`
