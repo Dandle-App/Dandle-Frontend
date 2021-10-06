@@ -26,9 +26,9 @@ const OrgSignIn = ({navigation}) => {
     axios.post(url, values)
     .then(res => {
         const response = res.data;
-        const {message, status} = response;
+        const {success, user} = response;
 
-        if(status === "200"){
+        if(success === true){
             setMessageStatus("sign in successful");
             setMessage(message);
             () => navigation.navigate("Welcome");
