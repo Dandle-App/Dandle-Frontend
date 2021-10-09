@@ -28,11 +28,12 @@ const Welcome = ({navigation}) => {
 
           <StlyedButton 
             onPress={()=>navigation.navigate('SignIn')}
+            width='90%'
           >
             <Text>Continue</Text>
           </StlyedButton>
           <Pad_h_medium/>
-          <TextLink onPress={()=>navigation.navigate("OrgSignUp")}>
+          <TextLink onPress={()=>navigation.navigate("OrgSignIn")}>
             <Header3>I am an organization/company</Header3>
           </TextLink>
         </InnerContainer>
@@ -50,10 +51,11 @@ const Welcome = ({navigation}) => {
           <Pad_h_medium/><Pad_h_medium/>
           <StlyedButton 
             onPress={()=>navigation.navigate('SignIn')}
+            width='100%'
           >
             <Text>Continue</Text>
           </StlyedButton>
-          <TextLink onPress={()=>navigation.navigate("OrgSignUp")}>
+          <TextLink onPress={()=>navigation.navigate("OrgSignIn")}>
             <Header3>I am an organization/company</Header3>
           </TextLink>
         </LightContainer>

@@ -41,12 +41,13 @@ export const SignUpContainer = styled.View`
     align-items: center;
     padding: 0px;
 `;
-export const FlexHoriztal = styled.View`
-    flexDirection: row;
-    align-items: center;
-    justifyContent: space-around;
-    padding-bottom: ${status_bar_height}px;
-`;
+export const FlexHoriztal = styled.View(
+    ({justify}) => `
+        flexDirection: row;
+        align-items: center;
+        justifyContent: ${justify};
+    `
+);
 export const SignUp = styled.View`
     padding-top: ${status_bar_height}px;
 `;
@@ -64,6 +65,9 @@ export const Pad_h_small = styled.View`
 `;
 export const Pad_h_medium = styled.View`
     height: 45px;
+`;
+export const Pad_w_small = styled.View`
+    width: 20px;
 `;
 // text styles
 export const Header1 = styled.Text`
@@ -111,14 +115,16 @@ export const AppLogoRed = styled.Image`
     height:73px
 `;
 //button styles
-export const StlyedButton = styled.TouchableOpacity`
+export const StlyedButton = styled.TouchableOpacity(
+    ({center,justfy,width}) => `
     background-color: ${secondary};
     align-items: center;
     justifyContent: space-around;
-    width: 150px
+    width: ${width}
     height: 50px;
-    border-radius: 10px;
-`;
+    border-radius: 35px;
+
+`);
 export const ScanButton = styled.TouchableOpacity`
     background-color: ${secondary};
     color= ${textLight};
