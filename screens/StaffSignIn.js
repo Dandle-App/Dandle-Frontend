@@ -20,7 +20,7 @@ const StaffSignIn = ({navigation}) => {
     [messageStatus, setMessageStatus] = React.useState("failed");
     const handleSubmit = (values, setSubmitting) => {
 
-        const url = "http://192.168.1.68:3000/signin/staff";
+        const url = "http://10.0.0.163:3000/signin/staff";
         axios.post(url, values)
         .then( (response) => {
             const result = response.data;
