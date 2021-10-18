@@ -18,6 +18,8 @@ const logo_img = require("../assets/logo_red.png");
 const OrgSignIn = ({navigation}) => {
     [message, setMessage] = React.useState("");
     [messageStatus, setMessageStatus] = React.useState("failed");
+    [hidePassword, setHidePassword] = React.useState(true);
+    
     const handleSubmit = (values, setSubmitting) => {
 
         const url = "http://10.0.0.163:3000/signin/org";
@@ -82,6 +84,9 @@ const OrgSignIn = ({navigation}) => {
                                         secureTextEntry={true}
                                         value={values.password}
                                         onChangeText={handleChange('password')}
+                                        isPassword={true}
+                                        hidePassword={hidePassword}
+                                        setHidePassword={setHidePassword}
                                     />
                                     <Pad_h_medium /><Pad_h_medium /><Pad_h_medium />
                                     <Pad_h_medium /><Pad_h_medium /><Pad_h_medium />

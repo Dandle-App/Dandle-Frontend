@@ -35,10 +35,12 @@ export const MsgBox = styled.Text`
 
 //buttons and links
 export const RightIcon = styled.TouchableOpacity`
-    left: 15px;
+    right: 1px;
+    width: 35px;
+    height: 35px;
+    top: 35px;
     position: absolute;
-    top: 10px;
-    z-index: 1;
+    z-index: 200;
 `;
 export const TextLink = styled.TouchableOpacity`
     align-items: center;
