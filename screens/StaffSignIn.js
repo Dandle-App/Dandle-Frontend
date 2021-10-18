@@ -18,6 +18,8 @@ const logo_img = require("../assets/logo_red.png");
 const StaffSignIn = ({navigation}) => {
     [message, setMessage] = React.useState("");
     [messageStatus, setMessageStatus] = React.useState("failed");
+    [hidePassword, setHidePassword] = React.useState(true);
+
     const handleSubmit = (values, setSubmitting) => {
 
         const url = "http://192.168.1.68:3000/signin/staff";
@@ -78,9 +80,12 @@ const StaffSignIn = ({navigation}) => {
                                     <StyldTextInput
                                         label="Password"
                                         placeholder="* * * * * * *"
-                                        secureTextEntry={true}
+                                        secureTextEntry={hidePassword}
                                         value={values.password}
                                         onChangeText={handleChange('password')}
+                                        isPassword={true}
+                                        hidePassword={hidePassword}
+                                        setHidePassword={setHidePassword}
                                     />
                                     <Pad_h_medium /><Pad_h_medium /><Pad_h_medium />
                                     <Pad_h_medium /><Pad_h_medium /><Pad_h_medium />

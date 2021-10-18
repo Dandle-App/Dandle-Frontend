@@ -16,7 +16,11 @@ const logo_img = require("../assets/logo_red.png");
 
 
 const OrgSignUp = ({navigation}) => {
-  //write a handleSubmit function
+  [message, setMessage] = React.useState("");
+  [messageStatus, setMessageStatus] = React.useState("failed");
+  [hidePassword, setHidePassword] = React.useState(true);
+  [hideConfirmPassword, setHideConfirmPassword] = React.useState(true);
+
   const handleSubmit = (values) => {
 
     console.log(values);
@@ -82,16 +86,22 @@ const OrgSignUp = ({navigation}) => {
                                 <StyldTextInput
                                     label="Password"
                                     placeholder="* * * * * * *"
-                                    secureTextEntry={true}
+                                    secureTextEntry={hidePassword}
                                     onChangeText={handleChange("password")}
                                     value={values.password}
+                                    isPassword={true}
+                                    hidePassword={hidePassword}
+                                    setHidePassword={setHidePassword}
                                 />
                                 <StyldTextInput
                                     label="Confirm Password"
                                     placeholder="* * * * * * *"
-                                    secureTextEntry={true}
+                                    secureTextEntry={hideConfirmPassword}
                                     onChangeText={handleChange("confirmPassword")}
                                     value={values.confirmPassword}
+                                    isPassword={true}
+                                    hidePassword={hideConfirmPassword}
+                                    setHidePassword={setHideConfirmPassword}
                                 />
                                 <StyldTextInput
                                     label="Address"

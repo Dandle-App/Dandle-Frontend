@@ -15,7 +15,11 @@ import axios from "axios";
 const logo_img = require("../assets/logo_red.png");
 
 const StaffSignUp = ({navigation}) => {
-    //write a handleSubmit function
+    [message, setMessage] = React.useState("");
+    [messageStatus, setMessageStatus] = React.useState("");
+    [hidePassword, setHidePassword] = React.useState(true);
+    [hideConfirmPassword, setHideConfirmPassword] = React.useState(true);
+
     const handleSubmit = (values) => {
         
         console.log(values);
@@ -72,15 +76,21 @@ const StaffSignUp = ({navigation}) => {
                                     <StyldTextInput
                                         label="password"
                                         placeholder="* * * * * * *"
-                                        secureTextEntry={true}
+                                        secureTextEntry={hidePassword}
                                         value={values.password}
                                         onChangeText={handleChange('password')}
+                                        isPassword={true}
+                                        hidePassword={hidePassword}
+                                        setHidePassword={setHidePassword}
                                     />
                                     <StyldTextInput
                                         label="confirm password"
                                         placeholder="* * * * * * *"
-                                        secureTextEntry={true}
+                                        secureTextEntry={hideConfirmPassword}
                                         onChangeText={handleChange('confirmPassword')}
+                                        isPassword={true}
+                                        hidePassword={hideConfirmPassword}
+                                        setHidePassword={setHideConfirmPassword}
                                     />
                                     <StyldTextInput
                                         label="company/org code"
