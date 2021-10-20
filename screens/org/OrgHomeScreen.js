@@ -6,13 +6,13 @@ import {
         LightContainer, PadlessContainer, FlexHoriztal,
         Header1, Header2, Header3, TextLight,
         AppLogo, StlyedButton,
-        Pad_h_medium, Pad_h_small, Pad_w_small} from "../styles/styles";
-import { TextLink } from "../components/atoms/Atoms";
-import { StyldTextInput } from "../components/molecules/Molecules";
-import { StyledFormArea } from "../components/organisms/Organisms";
+        Pad_h_medium, Pad_h_small, Pad_w_small } from "../../styles/styles";
+import { TextLink } from "../../components/atoms/Atoms";
+import { StyldTextInput } from "../../components/molecules/Molecules";
+import { StyledFormArea } from "../../components/organisms/Organisms";
 import axios from "axios";
 
-OrgHomeScreen = (props) => {
+OrgHomeScreen = ({navigation}) => {
     return (
         <LightContainer>
             <StatusBar style="auto" />

@@ -2,6 +2,7 @@ import React from "react";
 import { Text, TextInput, ActivityIndicator } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { Formik, Form } from "formik";
+import { useDispatch, useSelector } from "react-redux";
 import { 
         LightContainer, PadlessContainer, FlexHoriztal,
         Header1, Header2, Header3, TextLight,
@@ -12,6 +13,7 @@ import { StyldTextInput } from "../components/molecules/Molecules";
 import { StyledFormArea } from "../components/organisms/Organisms";
 import KeyboardAvoidingWrapper from "../components/organisms/KeyboardAvoidingWrapper";
 import axios from "axios";
+import { setToken } from "../features/user/userSlice";
 
 const logo_img = require("../assets/logo_red.png");
 
@@ -19,6 +21,7 @@ const StaffSignIn = ({navigation}) => {
     [message, setMessage] = React.useState("");
     [messageStatus, setMessageStatus] = React.useState("failed");
     [hidePassword, setHidePassword] = React.useState(true);
+    const dispatch = useDispatch();
 
     const handleSubmit = (values, setSubmitting) => {
 
@@ -26,11 +29,12 @@ const StaffSignIn = ({navigation}) => {
         axios.post(url, values)
         .then( (response) => {
             const result = response.data;
-            const {success, user, token} = response.data;
+            const {success, user, token, refreshToken} = response.data;
             if(success === true) {
                 setMessageStatus("success");
                 setMessage("sign in successful");
-                navigation.navigate("Welcome");
+                storeToken(token, refreshToken);
+                navigation.navigate("OrgHome");
             }
             else if (success === false) {
                 setMessageStatus("failed");
@@ -40,7 +44,7 @@ const StaffSignIn = ({navigation}) => {
         })
         .catch(err => {
             setSubmitting(false);
-            //setMessage("Oops! Network error. Try again soon");
+            // setMessage("Oops! Network error. Try again soon");
             if (err.response.status === 401) {
                 setMessage("Invalid username or password");
             }
@@ -53,6 +57,28 @@ const StaffSignIn = ({navigation}) => {
             console.log(message);
         });
     }
+// function that will store a token and refresh token in react-native-keychain
+const storeToken = (token, refreshToken) => {
+    return new Promise((resolve, reject) => {
+        const keychain = require("react-native-keychain");
+        keychain.setGenericPassword("dandle_staff_token", token)
+        .then(() => {
+            dispatch(setToken({token}));
+
+            keychain.setGenericPassword("dandle_staff_refreshToken", refreshToken)
+            .then(() => {
+                dispatch(setRefreshToken({refreshToken}));
+                resolve();
+            })
+            .catch(err => {
+                reject(err);
+            })
+        })
+        .catch(err => {
+            reject(err);
+        });
+    });
+}
     return (
         <KeyboardAvoidingWrapper>
             <LightContainer>
