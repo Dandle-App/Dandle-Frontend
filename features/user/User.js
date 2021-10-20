@@ -1,4 +1,4 @@
-const checkToken = (token) => {
+const getToken = (token) => {
     return axios.get("http://localhost:3000/api/staff/id", {
         headers: {
             "Authorization": "Bearer " + token
@@ -14,35 +14,43 @@ const checkToken = (token) => {
     });
 }
 
-// function that will store a token and refresh token in react-native-keychain
-const storeToken = (token, refreshToken) => {
-    return new Promise((resolve, reject) => {
-        const keychain = require("react-native-keychain");
-        keychain.setGenericPassword("dandle_staff_token", token)
-        .then(() => {
-            keychain.setGenericPassword("dandle_staff_refreshToken", refreshToken)
-            .then(() => {
-                resolve();
-            })
-            .catch(err => {
-                reject(err);
-            })
-        })
-        .catch(err => {
-            reject(err);
-        });
-    });
-}
-
-// function that will retrieve a token and refresh token from react-native-keychain
-const getToken = () => {
+// function that will check for a token and refresh token from react-native-keychain
+const checkToken = () => {
     return new Promise((resolve, reject) => {
         const keychain = require("react-native-keychain");
         keychain.getGenericPassword()
-        .then(credentials => {
+        .then(result => {
+            if (result) {
+                dispatch({type: 'user/setToken', payload: result.dandle_token});
+                dispatch({type: 'user/setRefreshToken', payload: result.dandle_refresh_token});
+                //setToken(result.dandle_token);
+                //setRefreshToken(result.dandle_refresh_token);
+                //resolve(result);
+            } else {
+                dispatch({type: 'user/setToken', payload: null});
+                dispatch({type: 'user/setRefreshToken', payload: null});
+                //reject("No credentials found");
+            }
+        })
+        .catch(err => {
+            //reject(err);
+            console.log(err);
+        });
+    });
+  }
+/*
+// function that will check for a token and refresh token from react-native-keychain
+const checkToken = () => {
+    return new Promise((resolve, reject) => {
+        const keychain = require("react-native-keychain");
+        keychain.getGenericPassword()
+        .then(result => {
+            if (result) {
+                resolve(result);
+            }
             resolve({
-                token: credentials.dandle_staff_token,
-                refreshToken: credentials.dandle_staff_refreshToken
+                token: result.dandle_staff_token,
+                refreshToken: result.dandle_staff_refreshToken
             });
         })
         .catch(err => {
@@ -50,8 +58,9 @@ const getToken = () => {
         });
     });
 }
+*/
 
-// write a function that will delete a token and refresh token from react-native-keychain
+// function that will delete a token and refresh token from react-native-keychain
 const deleteToken = () => {
     return new Promise((resolve, reject) => {
         const keychain = require("react-native-keychain");

@@ -13,26 +13,41 @@ import StaffSignUp from '../screens/StaffSignUp';
 
 import OrgSignIn from '../screens/OrgSignIn';
 import OrgSignUp from '../screens/OrgSignUp';
+import OrgHomeScreen from '../screens/org/OrgHomeScreen';
+
+// selecetors
+import { useSelector } from 'react-redux';
+import { selectToken } from '../features/user/userSlice';
 
 const Stack = createStackNavigator();
 const RootStack = () => {
+    const token = useSelector(selectToken)
     return (
         <NavigationContainer>
             <Stack.Navigator
-            screenOptions={{
-                headerShown: true,
-                headerTitle:'',
-                headerTransparent: true
-            }}
-            initialRouteName="Welcome"
+                screenOptions={{
+                    headerShown: true,
+                    headerTitle:'',
+                    headerTransparent: true
+                }}
+                initialRouteName={token ? 'OrgHomeScreen' : 'Welcome'}
             >
-                <Stack.Screen name="Welcome" component={Welcome} />
-                <Stack.Screen name="SignIn" component={SignIn} />
-                <Stack.Screen name="UserSignIn" component={UserSignIn} />
-                <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
-                <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
-                <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
-                <Stack.Screen name="StaffSignIn" component={StaffSignIn} />
+                { token ? (
+                    <> 
+                        <Stack.Screen name="OrgHome" component={OrgHomeScreen} />
+                    </>)
+                    :
+                    (<>
+                        <Stack.Screen name="SignIn" component={SignIn} />
+                        <Stack.Screen name="Welcome" component={Welcome} />
+                        <Stack.Screen name="UserSignIn" component={UserSignIn} />
+                        <Stack.Screen name="StaffSignIn" component={StaffSignIn} />
+                        <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
+                        <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
+                        <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
+                    </>)
+                }
+                
             </Stack.Navigator>
         </NavigationContainer>
       );
