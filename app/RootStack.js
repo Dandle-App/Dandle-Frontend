@@ -15,13 +15,14 @@ import OrgSignIn from '../screens/OrgSignIn';
 import OrgSignUp from '../screens/OrgSignUp';
 import OrgHomeScreen from '../screens/org/OrgHomeScreen';
 
-// selecetors
+// selecetors and hooks
 import { useSelector } from 'react-redux';
-import { selectToken } from '../features/user/userSlice';
+import { selectToken, selectRefreshToken } from '../features/user/userSlice';
 
 const Stack = createStackNavigator();
 const RootStack = () => {
     const token = useSelector(selectToken)
+    const refreshToken = useSelector(selectRefreshToken)
     return (
         <NavigationContainer>
             <Stack.Navigator
@@ -30,7 +31,7 @@ const RootStack = () => {
                     headerTitle:'',
                     headerTransparent: true
                 }}
-                initialRouteName={token ? 'OrgHomeScreen' : 'Welcome'}
+                initialRouteName={token ? 'OrgHome' : 'Welcome'}
             >
                 { token ? (
                     <> 
@@ -45,6 +46,7 @@ const RootStack = () => {
                         <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
                         <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
                         <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
+                        <Stack.Screen name="OrgHome" component={OrgHomeScreen} />
                     </>)
                 }
                 

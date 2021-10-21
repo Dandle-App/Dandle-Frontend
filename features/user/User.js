@@ -1,3 +1,7 @@
+import * as SecureStore from 'expo-secure-store';
+import { useSelector, useDispatch } from 'react-redux';
+import { setToken, selectToken, selectRefreshToken } from './userSlice';
+
 const getToken = (token) => {
     return axios.get("http://localhost:3000/api/staff/id", {
         headers: {
@@ -15,26 +19,30 @@ const getToken = (token) => {
 }
 
 // function that will check for a token and refresh token from react-native-keychain
-const checkToken = () => {
+export const checkToken = () => {
+    let token = useSelector(selectToken);
+    const dispatch = useDispatch();
+    
     return new Promise((resolve, reject) => {
-        const keychain = require("react-native-keychain");
-        keychain.getGenericPassword()
+        SecureStore.getItemAsync('token')
         .then(result => {
             if (result) {
-                dispatch({type: 'user/setToken', payload: result.dandle_token});
-                dispatch({type: 'user/setRefreshToken', payload: result.dandle_refresh_token});
+                dispatch(setToken({ token }));
+                //dispatch({type: 'user/setRefreshToken', payload: result.dandle_refresh_token});
                 //setToken(result.dandle_token);
                 //setRefreshToken(result.dandle_refresh_token);
-                //resolve(result);
+                console.log("Token: " + result);
+                resolve(result);
             } else {
-                dispatch({type: 'user/setToken', payload: null});
-                dispatch({type: 'user/setRefreshToken', payload: null});
+                dispatch(setToken({token}));
+                //dispatch({type: 'user/setRefreshToken', payload: null});
                 //reject("No credentials found");
+                console.log("No credentials found");
             }
         })
         .catch(err => {
-            //reject(err);
             console.log(err);
+            reject(err);
         });
     });
   }
