@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, TextInput } from "react-native";
+import { useSelector, useDispatch } from "react-redux";
 import { StatusBar } from 'expo-status-bar';
 import { Formik, Form } from "formik";
 import { 
@@ -12,6 +13,8 @@ import { StyldTextInput } from "../../components/molecules/Molecules";
 import { StyledFormArea } from "../../components/organisms/Organisms";
 import axios from "axios";
 
+import {selectToken} from "../../features/user/userSlice";
+
 OrgHomeScreen = ({navigation}) => {
     return (
         <LightContainer>
@@ -21,6 +24,7 @@ OrgHomeScreen = ({navigation}) => {
                     <AppLogo />
                     <Header1>OrgName</Header1>
                 </FlexHoriztal>
+                <Header2></Header2>
             </PadlessContainer>
         </LightContainer>
     );

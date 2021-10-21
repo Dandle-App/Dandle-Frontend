@@ -93,9 +93,11 @@ const StaffSignIn = ({navigation}) => {
         .then(() => {
             SecureStore.setItemAsync("refreshToken", refreshToken)
             .then(() => {
-                dispatch(setToken({token}));
-                dispatch(setToken({refreshToken}));
-                console.log("token and refreshToken stored");
+                dispatch(setToken(token));
+                dispatch(setToken(refreshToken));
+                console.log("successfully stored token and refreshToken");
+                console.log("token: ", token,'\n');
+                console.log("refreshToken: ", refreshToken);
             })
             .catch(err => {
                 console.log(err);
