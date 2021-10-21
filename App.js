@@ -8,25 +8,21 @@ import { store } from './app/store';
 import RootStack from './app/RootStack.js';
 import { setToken } from './features/user/userSlice.js';
 
-//import {checkToken} from './features/user/User.js'
+//storage
+import * as SecureStore from 'expo-secure-store';
 
-export default function App() {
-  [appReady, setAppReady] = React.useState(false);
-  //[token, setToken] = React.useState(null);
-  //[refreshToken, setRefreshToken] = React.useState('');
-  //const dispatch = useDispatch();
-  // function that will check for a token and refresh token from react-native-keychain
 const checkToken = () => {
   let token = useSelector(selectToken);
   const dispatch = useDispatch();
+  console.log('checking for token');
   SecureStore.getItemAsync('token')
   .then(result => {
       if (result) {
-          dispatch(setToken({ token }));
+          dispatch(setToken(token));
           console.log("Token: " + result);
           resolve(result);
       } else {
-          dispatch(setToken({token}));
+          dispatch(setToken(token));
           //reject("No credentials found");
           console.log("No credentials found");
       }
@@ -40,10 +36,16 @@ const checkToken = () => {
   
 }
 
+export default function App() {
+  [appReady, setAppReady] = React.useState(false);
+
+  // function that will check for a token and refresh token from react-native-keychain
+  
+
   if (appReady) {
     return (
       <AppLoading
-        startAsync={()=>checkToken}
+        startAsync={checkToken}
         onFinish={() => setAppReady(true)}
         onError={console.warn}
       />);

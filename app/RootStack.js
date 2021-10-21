@@ -31,7 +31,6 @@ const RootStack = () => {
                     headerTitle:'',
                     headerTransparent: true
                 }}
-                initialRouteName={token ? 'OrgHome' : 'Welcome'}
             >
                 { token ? (
                     <> 
