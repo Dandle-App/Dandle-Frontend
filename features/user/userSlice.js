@@ -8,8 +8,8 @@ const userSlice = createSlice({
 
     initialState: {
         name: '',
-        token: '',
-        refreshToken: '',
+        token: null,
+        refreshToken: null,
         isLoggedIn: false,
         isLoading: false,
         error: null
@@ -40,8 +40,8 @@ const userSlice = createSlice({
         setError: (state, action) => {
             state.error = action.payload;
         },
-        clear: (state) => {
-            state.name = '';
+        clearState: (state) => {
+            state.staff_name = '';
             state.token = '';
             state.refreshToken = '';
             state.isLoggedIn = false;
@@ -54,3 +54,13 @@ const userSlice = createSlice({
 export const { setName, setToken, deleteToken, setRefreshToken, deleteRefreshToken, setIsLoggedIn, setIsLoading, setError, clear } = userSlice.actions;
 export default userSlice.reducer;
 
+// selectors
+export const selectName = state => state.user.name;
+export const selectToken = state => state.user.token;
+export const selectRefreshToken = state => state.user.refreshToken;
+export const selectIsLoggedIn = state => state.user.isLoggedIn;
+export const selectIsLoading = state => state.user.isLoading;
+export const selectError = state => state.user.error;
+
+
+console.log(userSlice.reducer);
