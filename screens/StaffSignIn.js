@@ -3,6 +3,7 @@ import { Text, TextInput, ActivityIndicator } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { Formik, Form } from "formik";
 import { useDispatch, useSelector } from "react-redux";
+
 import { 
         LightContainer, PadlessContainer, FlexHoriztal,
         Header1, Header2, Header3, TextLight,
@@ -12,8 +13,11 @@ import { TextLink, MsgBox } from "../components/atoms/Atoms";
 import { StyldTextInput } from "../components/molecules/Molecules";
 import { StyledFormArea } from "../components/organisms/Organisms";
 import KeyboardAvoidingWrapper from "../components/organisms/KeyboardAvoidingWrapper";
+
+import * as SecureStore from "expo-secure-store";
 import axios from "axios";
 import { setToken } from "../features/user/userSlice";
+import {getToken} from "../features/user/User";
 
 const logo_img = require("../assets/logo_red.png");
 
@@ -25,7 +29,7 @@ const StaffSignIn = ({navigation}) => {
 
     const handleSubmit = (values, setSubmitting) => {
 
-        const url = "http://192.168.1.68:3000/signin/staff";
+        const url = "https://dandle.dustinc.dev/signin/staff";
         axios.post(url, values)
         .then( (response) => {
             const result = response.data;
@@ -34,6 +38,7 @@ const StaffSignIn = ({navigation}) => {
                 setMessageStatus("success");
                 setMessage("sign in successful");
                 storeToken(token, refreshToken);
+                //
                 navigation.navigate("OrgHome");
             }
             else if (success === false) {
@@ -54,31 +59,53 @@ const StaffSignIn = ({navigation}) => {
         })
         .finally(() => {
             setSubmitting(false);
-            console.log(message);
         });
     }
-// function that will store a token and refresh token in react-native-keychain
-const storeToken = (token, refreshToken) => {
-    return new Promise((resolve, reject) => {
-        const keychain = require("react-native-keychain");
-        keychain.setGenericPassword("dandle_staff_token", token)
-        .then(() => {
-            dispatch(setToken({token}));
+    /*
+    // function that will store a token and refresh token in react-native-keychain
+    const storeToken = (token, refreshToken) => {
+        return new Promise((resolve, reject) => {
 
-            keychain.setGenericPassword("dandle_staff_refreshToken", refreshToken)
+            const keychain = require("react-native-keychain");
+            keychain.setGenericPassword("dandle_staff_token", token)
             .then(() => {
-                dispatch(setRefreshToken({refreshToken}));
-                resolve();
+                dispatch(setToken({token}));
+
+                keychain.setGenericPassword("dandle_staff_refreshToken", refreshToken)
+                .then(() => {
+                    dispatch(setRefreshToken({refreshToken}));
+                    resolve();
+                })
+                .catch(err => {
+                    reject(err);
+                })
             })
             .catch(err => {
                 reject(err);
+            });
+        });
+    }
+    */
+    
+    // function that will store a token and refresh token in react-native-keychain
+    const storeToken = (token, refreshToken) => {
+        SecureStore.setItemAsync("token", token)
+        .then(() => {
+            SecureStore.setItemAsync("refreshToken", refreshToken)
+            .then(() => {
+                dispatch(setToken({token}));
+                dispatch(setToken({refreshToken}));
+                console.log("token and refreshToken stored");
             })
+            .catch(err => {
+                console.log(err);
+            });
         })
         .catch(err => {
-            reject(err);
+            console.log(err);
         });
-    });
-}
+    }
+    
     return (
         <KeyboardAvoidingWrapper>
             <LightContainer>
@@ -140,3 +167,29 @@ const storeToken = (token, refreshToken) => {
 }
 
 export default StaffSignIn;
+
+/*
+// function that will store a token and refresh token in react-native-keychain
+const storeToken = (token, refreshToken) => {
+    return new Promise((resolve, reject) => {
+        console.log(refreshToken);
+        const keychain = require("react-native-keychain");
+        keychain.setGenericPassword("dandle_staff_token", token)
+        .then(() => {
+            dispatch(setToken({token}));
+
+            keychain.setGenericPassword("dandle_staff_refreshToken", refreshToken)
+            .then(() => {
+                dispatch(setRefreshToken({refreshToken}));
+                resolve();
+            })
+            .catch(err => {
+                reject(err);
+            })
+        })
+        .catch(err => {
+            reject(err);
+        });
+    });
+}
+*/
