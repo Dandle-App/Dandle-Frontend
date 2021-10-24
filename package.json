@@ -31,14 +31,21 @@
     "react-native-swiper": "^1.6.0",
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.5",
+    "react-test-render": "^1.1.2",
+    "react-test-renderer": "^17.0.2",
     "styled-components": "^5.3.1"
-  },
-  "jest": {
-    "preset": "react-native"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@testing-library/jest-native": "^4.0.2",
+    "@testing-library/react-native": "^8.0.0",
     "jest-expo": "^42.1.0"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    }
   },
   "private": true
 }
