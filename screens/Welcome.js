@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image } from "react-native";
+import { Text, Image, Button } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import Swiper from 'react-native-swiper';
 import { Video, AVPlaybackStatus } from 'expo-av';
