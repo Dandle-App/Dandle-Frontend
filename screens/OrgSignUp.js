@@ -24,7 +24,7 @@ const OrgSignUp = ({navigation}) => {
   const handleSubmit = (values) => {
 
     console.log(values);
-    const url = "http://localhost:3000/v1/orgs/signup";
+    const url = "http://dandle.dustinc.dev/orgs/signup";
     axios.post(url, values)
     .then(res => {
         console.log(res);
