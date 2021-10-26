@@ -14,32 +14,39 @@ import { StyledFormArea } from "../../components/organisms/Organisms";
 import axios from "axios";
 
 import {selectToken} from "../../features/user/userSlice";
+import * as SecureStore from "expo-secure-store";
 
-const OrgHomeScreen = ({navigation}) => {
+let token_ = '';
+
+const checkToken = async() => {
+    try {
+        SecureStore.getItemAsync("token").then(token => {
+            token_ = token;
+            console.log('\x1b[35mTOKEN from SecureStore: ' + token + '\x1b[0m');
+        })
+    } catch (error) {
+        console.log(error);
+    }
+    
+}
+
+const TestScreen = ({navigation}) => {;
     return (
         <LightContainer>
             <StatusBar style="auto" />
             <PadlessContainer>
+                
                 <FlexHoriztal>
-                    <AppLogo />
-                    <Header1>OrgName</Header1>
+                    <Header1>Test Screen</Header1>
                 </FlexHoriztal>
-                <Header2></Header2>
-
                 <Pad_h_medium />
-                <StlyedButton onPress={() => navigation.navigate("TestScreen")} width='80%'>
-                <TextLight>Go to TestScreen</TextLight>
-                </StlyedButton>
-
-                <Pad_h_small/>
-
-                <StlyedButton onPress={console.log('reset func. in progress')} width='80%'>
-                    <TextLight>Reset token</TextLight>
-                </StlyedButton>
+                <Text>See console for result of click</Text>
+                <Text>{token_}</Text>
+                <Pad_h_medium /><Pad_h_medium />
+                <StlyedButton width='60%' onPress={() => checkToken()}><TextLight>Click me</TextLight></StlyedButton>
             </PadlessContainer>
-            
         </LightContainer>
     );
 }
 
-export default OrgHomeScreen;
+export default TestScreen;

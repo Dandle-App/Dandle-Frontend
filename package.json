@@ -13,7 +13,10 @@
     "@react-navigation/native-stack": "^6.1.0",
     "@react-navigation/stack": "^6.0.7",
     "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-native": "^4.0.2",
+    "@testing-library/react-native": "^8.0.0",
     "axios": "^0.21.4",
+    "chalk": "^4.1.2",
     "expo": "~42.0.1",
     "expo-app-loading": "1.1.2",
     "expo-av": "^9.2.3",
@@ -31,14 +34,19 @@
     "react-native-swiper": "^1.6.0",
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.5",
+    "react-test-renderer": "^17.0.2",
     "styled-components": "^5.3.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "jest-expo": "^42.1.0"
+    "jest-expo": "^42.1.0",
+    "jest-styled-components": "^7.0.5"
   },
   "private": true
 }

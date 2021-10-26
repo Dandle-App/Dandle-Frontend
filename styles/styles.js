@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import Constants from 'expo-constants';
 import { View, Text, Image, TouchableOpacity } from "react-native";
 

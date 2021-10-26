@@ -20,6 +20,7 @@ import { setToken } from "../features/user/userSlice";
 import {getToken} from "../features/user/User";
 
 const logo_img = require("../assets/logo_red.png");
+const chalk = require('chalk');
 
 const StaffSignIn = ({navigation}) => {
     [message, setMessage] = React.useState("");
@@ -88,16 +89,16 @@ const StaffSignIn = ({navigation}) => {
     */
     
     // function that will store a token and refresh token in react-native-keychain
-    const storeToken = (token, refreshToken) => {
+    async function storeToken (token, refreshToken) {
         SecureStore.setItemAsync("token", token)
         .then(() => {
             SecureStore.setItemAsync("refreshToken", refreshToken)
             .then(() => {
                 dispatch(setToken(token));
                 dispatch(setToken(refreshToken));
-                console.log("successfully stored token and refreshToken");
-                console.log("token: ", token,'\n');
-                console.log("refreshToken: ", refreshToken);
+                console.log("\x1b[32m successfully stored token and refresh-token\n");
+                console.log("\x1b[0m token: ", token,'\n');
+                console.log("refreshToken: ", refreshToken, '\n');
             })
             .catch(err => {
                 console.log(err);
