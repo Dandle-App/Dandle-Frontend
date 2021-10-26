@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import Constants from 'expo-constants';
 import { colors } from '../../styles/styles';
 import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
@@ -35,10 +35,12 @@ export const MsgBox = styled.Text`
 
 //buttons and links
 export const RightIcon = styled.TouchableOpacity`
-    left: 15px;
+    right: 1px;
+    width: 35px;
+    height: 35px;
+    top: 35px;
     position: absolute;
-    top: 10px;
-    z-index: 1;
+    z-index: 200;
 `;
 export const TextLink = styled.TouchableOpacity`
     align-items: center;
