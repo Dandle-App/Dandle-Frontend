@@ -15,6 +15,8 @@ import OrgSignIn from '../screens/OrgSignIn';
 import OrgSignUp from '../screens/OrgSignUp';
 import OrgHomeScreen from '../screens/org/OrgHomeScreen';
 
+import TestScreen from '../screens/org/TestScreen';
+
 // selecetors and hooks
 import { useSelector } from 'react-redux';
 import { selectToken, selectRefreshToken } from '../features/user/userSlice';
@@ -33,8 +35,9 @@ const RootStack = () => {
                 }}
             >
                 { token ? (
-                    <> 
+                    <>
                         <Stack.Screen name="OrgHome" component={OrgHomeScreen} />
+                        <Stack.Screen name="TestScreen" component={TestScreen} />
                     </>)
                     :
                     (<>
