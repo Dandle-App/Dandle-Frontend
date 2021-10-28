@@ -37,7 +37,6 @@ const OrgHomeScreen = ({navigation}) => {
                     <TextLight>Reset token</TextLight>
                 </StlyedButton>
             </PadlessContainer>
-            
         </LightContainer>
     );
 }
