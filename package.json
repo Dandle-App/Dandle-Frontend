@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
     "@react-navigation/stack": "^6.0.7",
@@ -32,7 +33,7 @@
     "react-native-keychain": "^8.0.0",
     "react-native-screens": "^3.7.2",
     "react-native-swiper": "^1.6.0",
-    "react-native-web": "~0.13.12",
+    "react-native-web": "^0.17.5",
     "react-redux": "^7.2.5",
     "react-test-renderer": "^17.0.2",
     "styled-components": "^5.3.1"
@@ -40,7 +41,7 @@
   "jest": {
     "preset": "jest-expo",
     "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
     }
   },
   "devDependencies": {

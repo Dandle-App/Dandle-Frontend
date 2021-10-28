@@ -7,6 +7,8 @@ import { store } from './app/store';
 // screens
 import RootStack from './app/RootStack.js';
 import { setToken } from './features/user/userSlice.js';
+import OrgHomeScreen from './screens/org/OrgHomeScreen';
+import OrgTabs from './components/molecules/OrgTabs';
 
 // storage
 import * as SecureStore from 'expo-secure-store';
@@ -35,7 +37,11 @@ export default function App() {
     return <AppLoading /> 
  } 
 
-  return ( <Provider store={store}><RootStack /></Provider> );
+  return (
+    <OrgTabs />
+    //<OrgHomeScreen/> 
+    //<Provider store={store}><RootStack /></Provider>
+    );
   
 }
 
