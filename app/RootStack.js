@@ -58,3 +58,11 @@ const RootStack = () => {
 }
 
 export default RootStack;
+
+/*
+orgHomeTba component
+OrgNavStack => <OrgHomeScreen />
+
+[{name: Mbami, order_id, ...}, .., ....,]
+filter by progress.
+*/
