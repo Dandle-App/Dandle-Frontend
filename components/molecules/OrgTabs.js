@@ -25,7 +25,7 @@ export default function OrgTabs() {
           tabBarShowLabel: false,
           tabBarStyle: {
             position: 'absolute', 
-            backgroundColor: '#630101', 
+            backgroundColor: '#f38484', 
             borderRadius: 100}}
         }
       >
