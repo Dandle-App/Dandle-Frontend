@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Octicons} from '@expo/vector-icons';
 
 //screens
 import OrgSettings from '../../screens/org/OrgSettings';
@@ -43,14 +44,8 @@ export default function OrgTabs() {
           name="Settings" 
           component={OrgSettings}
           options={{
-            tabBarIcon: ({size,focused,color}) => {
-              return(
-                <Image 
-                  style={{width: size, height: size}}
-                  //source={SETTINGS}
-                  source={SETTINGSTRANSPARENT}
-                />
-              )
+            tabBarIcon: () => {
+              <Octicons name='gear'></Octicons>
             }
           }}
         />
