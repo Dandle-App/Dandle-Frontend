@@ -15,6 +15,13 @@ const HOME = require('../../assets/home.png');
 const CHAT = require('../../assets/chat.png');
 const ANALYTICS = require('../../assets/analytics.png');
 
+//transparent icons
+const SETTINGSTRANSPARENT = require('../../assets/settingsTransparent.png');
+const HOMETRANSPARENT = require('../../assets/homeTransparent.png');
+const CHATTRANSPARENT = require('../../assets/chatTransparent.png');
+const ANALYTICSTRANSPARENT = require('../../assets/analyticsTransparent.png');
+
+
 const Tab = createBottomTabNavigator();
 
 export default function OrgTabs() {
@@ -26,7 +33,10 @@ export default function OrgTabs() {
           tabBarStyle: {
             position: 'absolute', 
             backgroundColor: '#f38484', 
-            borderRadius: 100}}
+            borderTopRightRadius: 25,
+            borderTopLeftRadius: 25,},
+            tabBarActiveTintColor: '#f38484'
+          }
         }
       >
         <Tab.Screen 
@@ -37,7 +47,8 @@ export default function OrgTabs() {
               return(
                 <Image 
                   style={{width: size, height: size}}
-                  source={SETTINGS}
+                  //source={SETTINGS}
+                  source={SETTINGSTRANSPARENT}
                 />
               )
             }
@@ -51,7 +62,8 @@ export default function OrgTabs() {
               return(
                 <Image 
                   style={{width: size, height: size}}
-                  source={HOME}
+                  //source={HOME}
+                  source={HOMETRANSPARENT}
                 />
               )
             }
@@ -65,7 +77,8 @@ export default function OrgTabs() {
               return(
                 <Image 
                   style={{width: size, height: size}}
-                  source={CHAT}
+                  //source={CHAT}
+                  source={CHATTRANSPARENT}
                 />
               )
             }
@@ -79,7 +92,8 @@ export default function OrgTabs() {
               return(
                 <Image 
                   style={{width: size, height: size}}
-                  source={ANALYTICS}
+                  //source={ANALYTICS}
+                  source={ANALYTICSTRANSPARENT}
                 />
               )
             }
