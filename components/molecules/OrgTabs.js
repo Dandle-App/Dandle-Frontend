@@ -1,19 +1,14 @@
 import * as React from 'react';
-import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Octicons} from '@expo/vector-icons';
 
 //screens
 import OrgSettings from '../../screens/org/OrgSettings';
 import OrgHomeScreen from '../../screens/org/OrgHomeScreen';
 import OrgAnalytics from '../../screens/org/OrgAnalytics';
-import OrgChat from '../../screens/org/OrgChat'; 
+import OrgChat from '../../screens/org/OrgChat';
 
-//icons
-const SETTINGS = require('../../assets/settings.png');
-const HOME = require('../../assets/home.png');
-const CHAT = require('../../assets/chat.png');
-const ANALYTICS = require('../../assets/analytics.png');
 
 const Tab = createBottomTabNavigator();
 
@@ -26,19 +21,19 @@ export default function OrgTabs() {
           tabBarStyle: {
             position: 'absolute', 
             backgroundColor: '#f38484', 
-            borderRadius: 100}}
+            borderTopRightRadius: 25,
+            borderTopLeftRadius: 25,},
+            tabBarActiveTintColor: '#f38484'
+          }
         }
       >
         <Tab.Screen 
           name="Settings" 
           component={OrgSettings}
           options={{
-            tabBarIcon: ({size,focused,color}) => {
+            tabBarIcon: () => {
               return(
-                <Image 
-                  style={{width: size, height: size}}
-                  source={SETTINGS}
-                />
+                <Octicons name='gear' size={30}/>
               )
             }
           }}
@@ -47,12 +42,9 @@ export default function OrgTabs() {
           name="Home" 
           component={OrgHomeScreen}
           options={{
-            tabBarIcon: ({size,focused,color}) => {
+            tabBarIcon: () => {
               return(
-                <Image 
-                  style={{width: size, height: size}}
-                  source={HOME}
-                />
+                <Octicons name='home' size={30}/>
               )
             }
           }} 
@@ -63,10 +55,7 @@ export default function OrgTabs() {
           options={{
             tabBarIcon: ({size,focused,color}) => {
               return(
-                <Image 
-                  style={{width: size, height: size}}
-                  source={CHAT}
-                />
+                <Octicons name='comment-discussion' size={30}/>
               )
             }
           }}
@@ -77,10 +66,7 @@ export default function OrgTabs() {
           options={{
             tabBarIcon: ({size,focused,color}) => {
               return(
-                <Image 
-                  style={{width: size, height: size}}
-                  source={ANALYTICS}
-                />
+                <Octicons name='graph' size={30}/>
               )
             }
           }}
