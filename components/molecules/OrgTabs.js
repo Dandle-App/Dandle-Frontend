@@ -19,11 +19,11 @@ export default function OrgTabs() {
         screenOptions={{
           tabBarShowLabel: false,
           tabBarStyle: {
-            position: 'absolute', 
+            position: 'absolute',
             backgroundColor: '#f38484', 
             borderTopRightRadius: 25,
             borderTopLeftRadius: 25,},
-            tabBarActiveTintColor: '#f38484'
+            tabBarActiveBackgroundColor: '#d64547',
           }
         }
       >
@@ -33,7 +33,7 @@ export default function OrgTabs() {
           options={{
             tabBarIcon: () => {
               return(
-                <Octicons name='gear' size={30}/>
+                <Octicons name='gear' size={25} color='white'/>
               )
             }
           }}
@@ -44,7 +44,7 @@ export default function OrgTabs() {
           options={{
             tabBarIcon: () => {
               return(
-                <Octicons name='home' size={30}/>
+                <Octicons name='home' size={25} color='white'/>
               )
             }
           }} 
@@ -55,7 +55,7 @@ export default function OrgTabs() {
           options={{
             tabBarIcon: ({size,focused,color}) => {
               return(
-                <Octicons name='comment-discussion' size={30}/>
+                <Octicons name='comment-discussion' size={25} color='white'/>
               )
             }
           }}
@@ -66,7 +66,7 @@ export default function OrgTabs() {
           options={{
             tabBarIcon: ({size,focused,color}) => {
               return(
-                <Octicons name='graph' size={30}/>
+                <Octicons name='graph' size={25} color='white'/>
               )
             }
           }}
