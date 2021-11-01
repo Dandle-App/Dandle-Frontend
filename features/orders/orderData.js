@@ -1,7 +1,6 @@
 const orderData = [
     {
-        order_id: 1,
-        orderNumber: 'A001',
+        order_id: '20180101203000',
         orderDate: '2018-01-01:20:30:00',
         orderStatus: 'Pending',
         customerId: 1,
@@ -9,37 +8,44 @@ const orderData = [
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
+        customerPhone: '+1-212-555-1212',
+        org_id: 'DANDL3ION',
+        org_name: 'Dandelion',
         orderTotal: '$1,000.00',
         orderItems: [
             {
                 productId: 1,
-                productName: 'Product 1',
+                productName: 'Pasta',
                 productSKU: 'SKU-001',
                 productPrice: '$5.00',
                 productQuantity: 1,
                 productTotal: '$5.00',
+                prodictImage: 'https://www.pexels.com/photo/food-plate-dinner-lunch-5807019/'
             },
             {
                 productId: 2,
-                productName: 'Product 2',
+                productName: 'Kebab',
                 productSKU: 'SKU-002',
                 productPrice: '$10.00',
                 productQuantity: 1,
                 productTotal: '$10.00',
+                prodictImage: 'https://www.pexels.com/photo/food-dinner-lunch-meal-5191852/'
             },
         ],
     },
 
     {
-        order_id: 2,
-        orderNumber: 'A002',
-        orderDate: '2018-01-01',
+        order_id: '20180101203003',
+        orderDate: '2018-01-01:20:30:03',
         orderStatus: 'Pending',
-        customerId: 2,
-        customerName: 'Jane Doe',
+        customerId: 1,
+        customerName: 'John Doe',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
+        customerPhone: '+1-212-555-1212',
+        org_id: 'MSUDENVER',
+        org_name: 'Dandelion',
         orderTotal: '$1,000.00',
         orderItems: [
             {
@@ -60,13 +66,156 @@ const orderData = [
                 productPrice: '$10.00',
                 productQuantity: 1,
                 productTotal: '$10.00',
+                prodictImage: 'https://www.pexels.com/photo/deliciously-baked-apple-pie-7790871/',
             },
         ],
     },
+
+    {
+        order_id: '20180101203005',
+        orderDate: '2018-01-01:20:30:05',
+        orderStatus: 'Pending',
+        customerId: 1,
+        customerName: 'John Doe',
+        customerCity: 'New York',
+        customerState: 'New York',
+        customerCountry: 'USA',
+        customerPhone: '+1-200-550-1210',
+        org_id: 'DANDL3ION',
+        org_name: 'Dandelion',
+        orderTotal: '$1,000.00',
+        orderItems: [
+            {
+                id: 5,
+                productId: 5,
+                productName: 'Pasta',
+                productSKU: 'SKU-005',
+                productPrice: '$5.00',
+                productQuantity: 1,
+                productTotal: '$5.00',
+                prodictImage: 'https://www.pexels.com/photo/food-plate-dinner-lunch-5807019/',
+            },
+            {
+                id: 6,
+                productId: 6,
+                productName: 'Kebab',
+                productSKU: 'SKU-006',
+                productPrice: '$10.00',
+                productQuantity: 1,
+                productTotal: '$10.00',
+                prodictImage: 'https://www.pexels.com/photo/food-dinner-lunch-meal-5191852/',
+            },
+        ],
+    },
+    {
+        order_id: 4,
+        orderDate: '2018-01-01',
+        orderStatus: 'Pending',
+        customerId: 4,
+        customerName: 'Jane Doe',
+        customerCity: 'New York',
+        customerState: 'New York',
+        customerCountry: 'USA',
+        orderTotal: '$1,000.00',
+        orderItems: [
+            {
+                id: 7,
+                productId: 7,
+                productName: 'Pizza',
+                productSKU: 'SKU-007',
+                productPrice: '$15.00',
+                productQuantity: 1,
+                productTotal: '$5.00',
+                prodictImage: 'https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/',
+            },
+            {
+                id: 8,
+                productId: 8,
+                productName: 'Apple pie',
+                productSKU: 'SKU-008',
+                productPrice: '$10.00',
+                productQuantity: 1,
+                productTotal: '$10.00',
+                prodictImage: 'https://www.pexels.com/photo/deliciously-baked-apple-pie-7790871/',
+            },
+        ],
+    },
+    // create more orders
+    {
+        order_id: 5,
+        orderDate: '2018-01-01',
+        orderStatus: 'Pending',
+        customerId: 5,
+        customerName: 'John Doe',
+        customerCity: 'New York',
+        customerState: 'New York',
+        customerCountry: 'USA',
+        orderTotal: '$1,000.00',
+        orderItems: [
+            {
+                id: 9,
+                productId: 9,
+                productName: 'Pasta',
+                productSKU: 'SKU-009',
+                productPrice: '$5.00',
+                productQuantity: 1,
+                productTotal: '$5.00',
+                prodictImage: 'https://www.pexels.com/photo/food-plate-dinner-lunch-5807019/',
+            },
+            {
+                id: 10,
+                productId: 10,
+                productName: 'Kebab',
+                productSKU: 'SKU-010',
+                productPrice: '$10.00',
+                productQuantity: 1,
+                productTotal: '$10.00',
+                prodictImage: 'https://www.pexels.com/photo/food-dinner-lunch-meal-5191852/',
+            },
+        ],
+    },
+    {
+        order_id: 6,
+        orderDate: '2018-01-01',
+        orderStatus: 'Pending',
+        customerId: 6,
+        customerName: 'Jane Doe',
+        customerCity: 'New York',
+        customerState: 'New York',
+        customerCountry: 'USA',
+        orderTotal: '$1,000.00',
+        orderItems: [
+            {
+                id: 11,
+                productId: 11,
+                productName: 'Pizza',
+                productSKU: 'SKU-011',
+                productPrice: '$15.00',
+                productQuantity: 1,
+                productTotal: '$5.00',
+                prodictImage: 'https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/',
+            },
+            {
+                id: 12,
+                productId: 12,
+                productName: 'Apple pie',
+                productSKU: 'SKU-012',
+                productPrice: '$10.00',
+                productQuantity: 1,
+                productTotal: '$10.00',
+                prodictImage: 'https://www.pexels.com/photo/deliciously-baked-apple-pie-7790871/',
+            },
+        ],
+    }
+
 ];
 
 for (let i = 0; i < orderData.length; i++) {
     console.log(orderData[i]);
 }
 
-//export default orderData;
+// time to execute the loop
+const start = new Date().getTime();
+
+const end = new Date().getTime();
+console.log(`Time to execute the loop: ${end - start}ms`);
