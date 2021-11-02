@@ -1,5 +1,5 @@
 import React from 'react';
-import {create, act} from 'react-test-renderer';
+import {renderer} from 'react-test-renderer';
 import 'jest-styled-components'
 import OrgSignUp from '../screens/OrgSignUp';
 
