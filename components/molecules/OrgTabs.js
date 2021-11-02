@@ -14,18 +14,22 @@ const Tab = createBottomTabNavigator();
 
 export default function OrgTabs() {
   return (
-    <NavigationContainer>
+    <NavigationContainer 
+      independent={true}
+    >
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false,
           tabBarStyle: {
             position: 'absolute',
             backgroundColor: '#f38484', 
-            borderTopRightRadius: 25,
-            borderTopLeftRadius: 25,},
-            tabBarActiveBackgroundColor: '#d64547',
-          }
-        }
+            borderTopRightRadius: 2,
+            borderTopLeftRadius: 2,
+          },
+          headerTransparent : true,
+          headerShown: false,
+          tabBarActiveBackgroundColor: '#d64547',
+        }}
       >
         <Tab.Screen 
           name="Settings" 

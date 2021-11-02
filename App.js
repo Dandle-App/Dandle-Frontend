@@ -38,9 +38,7 @@ export default function App() {
  } 
 
   return (
-    <OrgTabs />
-    //<OrgHomeScreen/> 
-    //<Provider store={store}><RootStack /></Provider>
+    <Provider store={store}><RootStack /></Provider>
     );
   
 }

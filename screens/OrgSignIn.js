@@ -30,7 +30,7 @@ const OrgSignIn = ({navigation}) => {
             if(success === true) {
                 setMessageStatus("success");
                 setMessage("sign in successful");
-                navigation.navigate("Welcome");
+                navigation.navigate("OrgTabs");
             }
             else if (success === false) {
                 setMessageStatus("failed");
