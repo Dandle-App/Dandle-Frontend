@@ -1,10 +1,10 @@
-const orderData = [
+export const orderData = [
     {
         order_id: '20180101203000',
         orderDate: '2018-01-01:20:30:00',
         orderStatus: 'Pending',
         customerId: 1,
-        customerName: 'John Doe',
+        customerName: 'Mbami Luka',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
@@ -39,7 +39,7 @@ const orderData = [
         orderDate: '2018-01-01:20:30:03',
         orderStatus: 'Pending',
         customerId: 1,
-        customerName: 'John Doe',
+        customerName: 'Bradley Isaacs',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
@@ -76,7 +76,7 @@ const orderData = [
         orderDate: '2018-01-01:20:30:05',
         orderStatus: 'Pending',
         customerId: 1,
-        customerName: 'John Doe',
+        customerName: 'Greg Dews',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
@@ -108,11 +108,11 @@ const orderData = [
         ],
     },
     {
-        order_id: 4,
+        order_id: '20180101203007',
         orderDate: '2018-01-01',
         orderStatus: 'Pending',
         customerId: 4,
-        customerName: 'Jane Doe',
+        customerName: 'Dustin Crain',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
@@ -140,13 +140,13 @@ const orderData = [
             },
         ],
     },
-    // create more orders
+
     {
-        order_id: 5,
+        order_id: '20190101203008',
         orderDate: '2018-01-01',
         orderStatus: 'Pending',
         customerId: 5,
-        customerName: 'John Doe',
+        customerName: 'Naji Shamas',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
@@ -175,11 +175,11 @@ const orderData = [
         ],
     },
     {
-        order_id: 6,
+        order_id: '20190101203009',
         orderDate: '2018-01-01',
         orderStatus: 'Pending',
         customerId: 6,
-        customerName: 'Jane Doe',
+        customerName: 'Willem Duvenham',
         customerCity: 'New York',
         customerState: 'New York',
         customerCountry: 'USA',
@@ -210,12 +210,52 @@ const orderData = [
 
 ];
 
-for (let i = 0; i < orderData.length; i++) {
-    console.log(orderData[i]);
+export function generateOrder(arr,n){
+    // generate 1000 orders
+    const start = new Date().getTime();
+
+    for (let i = 0; i < n; i++) {
+        const order = {
+            order_id: `0000000${i}`,
+            orderDate: `2018-01-01:20:30:${i}`,
+            orderStatus: 'Pending',
+            customerId: i,
+            customerName: 'John Doe',
+            customerCity: 'New York',
+            customerState: 'New York',
+            customerCountry: 'USA',
+            customerPhone: '+1-200-550-1210',
+            org_id: 'DANDL3ION',
+            org_name: 'Dandelion',
+            orderTotal: '$1,000.00',
+            orderItems: [
+                {
+                    id: i,
+                    productId: i,
+                    productName: 'Pasta',
+                    productSKU: 'SKU-005',
+                    productPrice: '$5.00',
+                    productQuantity: 1,
+                    productTotal: '$5.00',
+                    prodictImage: 'https://www.pexels.com/photo/food-plate-dinner-lunch-5807019/',
+                },
+                {
+                    id: i,
+                    productId: i,
+                    productName: 'Kebab',
+                    productSKU: 'SKU-006',
+                    productPrice: '$10.00',
+                    productQuantity: 1,
+                    productTotal: '$10.00',
+                    prodictImage: 'https://www.pexels.com/photo/food-dinner-lunch-meal-5191852/',
+                },
+            ],
+        };
+        arr.push(order);
+    }
+    // time taken to generate 1000 orders
+    const end = new Date().getTime();
+    console.log(`Time to load and display orders: ${end - start}ms`);
 }
 
-// time to execute the loop
-const start = new Date().getTime();
-
-const end = new Date().getTime();
-console.log(`Time to execute the loop: ${end - start}ms`);
+generateOrder(orderData,500);
