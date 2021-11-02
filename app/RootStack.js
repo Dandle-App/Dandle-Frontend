@@ -35,25 +35,35 @@ const RootStack = () => {
                     headerTransparent: true
                 }}
             >
-                { token ? (
-                    <>
+                { token ?
+                    (<Stack.Group>
                         <Stack.Screen name="OrgTabs" component={OrgTabs} />
-                        <Stack.Screen name="OrgHome" component={OrgHomeScreen} />
+                        <Stack.Screen name="Welcome" component={Welcome} />
                         <Stack.Screen name="TestScreen" component={TestScreen} />
-                    </>)
+
+                        <Stack.Screen name="SignIn" component={SignIn} />
+                        <Stack.Screen name="UserSignIn" component={UserSignIn} />
+                        <Stack.Screen name="StaffSignIn" component={StaffSignIn} />
+                        <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
+                        <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
+                        <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
+
+                    </Stack.Group>
+                    )
+
                     :
-                    (
-                        // auth screens
-                        <Stack.Group>
-                            <Stack.Screen name="Welcome" component={Welcome} />
-                            <Stack.Screen name="SignIn" component={SignIn} />
-                            <Stack.Screen name="UserSignIn" component={UserSignIn} />
-                            <Stack.Screen name="StaffSignIn" component={StaffSignIn} />
-                            <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
-                            <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
-                            <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
-                            <Stack.Screen name="OrgTabs" component={OrgTabs} />
-                        </Stack.Group>
+                    
+                    // auth screens
+                    (<Stack.Group>
+                        <Stack.Screen name="Welcome" component={Welcome} />
+                        <Stack.Screen name="SignIn" component={SignIn} />
+                        <Stack.Screen name="UserSignIn" component={UserSignIn} />
+                        <Stack.Screen name="StaffSignIn" component={StaffSignIn} />
+                        <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
+                        <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
+                        <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
+                        <Stack.Screen name="OrgTabs" component={OrgTabs} />
+                    </Stack.Group>
                     )
                 }
                 
