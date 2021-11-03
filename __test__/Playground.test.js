@@ -16,11 +16,3 @@ describe('Welcome', () => {
         expect(true).toBeTruthy();
     });
 })
-
-
-describe('OrgSignUp Snapshot', () => {
-    it('renders correctly', () => {
-        const tree = renderer.create(<OrgSignUp />).toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-})
