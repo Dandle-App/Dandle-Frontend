@@ -50,7 +50,12 @@ const orderSlice = createSlice({
       order.total -= action.payload.item.price;
     },
 
-    setOrder: (state, action) => {
+    updateOrders: (state, action) => {
+      /** Set the entire orders array by assignment: O(1) */
+      state.orders = action.payload;
+    },
+
+    updateOrderItem: (state, action) => {
       /** Set or edit an order */
       state.orders = state.orders.map((item) => {
         if (item.order_id === action.payload.order_id) {
@@ -59,15 +64,6 @@ const orderSlice = createSlice({
       });
     },
 
-    setOrderItem: (state, action) => {
-      /** Set or edit an item in specific order */
-      const order = state.orders.find(order => order.order_id === action.payload.order_id);
-      order.items = order.items.map((item) => {
-        if (item.item_id === action.payload.item_id) {
-          item = action.payload;
-        }
-      });
-    },
 
     setOrderLoading: (state, action) => {
       /** Set order loading state */
@@ -90,8 +86,11 @@ const orderSlice = createSlice({
 // export action creators
 export const {
   addOrder,
+  addOrderItem,
   deleteOrder,
-  setOrder,
+  deleteOrderItem,
+  updateOrders,
+  updateOrderItem,
   setOrderLoading,
   setError,
 } = orderSlice.actions;
@@ -123,7 +122,7 @@ export default orderSlice.reducer;
  *  - subtracting when price is 0, which results in -ve price -> check total and return state if it's 0
  *  - 
  *
- * 3. setOrder
+ * 3. updateOrder
  *  - bottlenecks in editing an order that does not exist using linear search -> binary search can be a solution
  *  - set loading to false
  *  - set error to null

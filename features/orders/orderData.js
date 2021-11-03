@@ -1,3 +1,6 @@
+import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+
 export const orderData = [
     {
         order_id: '20180101203000',
@@ -255,7 +258,6 @@ export function generateOrder(arr,n){
     }
     // time taken to generate 1000 orders
     const end = new Date().getTime();
-    console.log(`Time to load and display orders: ${end - start}ms`);
+    console.log(`Time to load orders: ${end - start}ms`);
 }
 
-generateOrder(orderData,500);
