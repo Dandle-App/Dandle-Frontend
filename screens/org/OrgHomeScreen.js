@@ -15,40 +15,14 @@ import { StyledFormArea } from "../../components/organisms/Organisms";
 import { deleteToken } from "../../features/user/User";
 import axios from "axios";
 
-import {selectToken} from "../../features/user/userSlice";
-import {orderData} from "../../features/orders/orderData";
+import {Orders} from "../../features/orders/Orders";
 
 const OrgHomeScreen = ({navigation}) => {
-    let orderDataStyled = orderData.map((order, index) => {
-        const {order_id, customerName, orderItems} = order;
-        let itemOne = orderItems[0];
-        
-        return (
-            <FlexHoriztal key={index}>
-                <Text>  {order_id}  </Text>
-                <Text>  {customerName}  </Text>
-                <Text>  {itemOne.productName} </Text>
-            </FlexHoriztal>
-        )
-    })
     return (
         <LightContainer>
             <StatusBar style="auto" />
             <PadlessContainer>
-                
-                <ScrollView
-                    contentContainerStyle={{
-                        flexGrow: 1,
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                   {orderDataStyled} 
-                </ScrollView>
-                
-
-                <Pad_h_medium />
-
+                <Orders/>
             </PadlessContainer>
         </LightContainer>
     );

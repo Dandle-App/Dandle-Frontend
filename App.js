@@ -13,6 +13,10 @@ import OrgTabs from './components/molecules/OrgTabs';
 // storage
 import * as SecureStore from 'expo-secure-store';
 
+// load data
+import { generateOrder } from './features/orders/orderData';
+import {orderData} from './features/orders/orderData';
+generateOrder ( orderData,100);
 
 // main app
 export default function App() {
