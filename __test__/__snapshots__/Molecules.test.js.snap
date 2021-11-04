@@ -378,5 +378,85 @@ exports[`Molecules StyledTextInput renders correctly 1`] = `
       <Text />
     </View>
   </View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "left": "2%",
+            "position": "absolute",
+            "top": "60%",
+            "zIndex": 1,
+          },
+        ]
+      }
+    >
+      <Text />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#f38484",
+            "fontSize": 16,
+            "paddingBottom": 0,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 5,
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Hidden Password
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      placeholder="* * * * * * *"
+      rejectResponderTermination={true}
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#f5f5f5",
+            "borderBottomWidth": 3,
+            "borderColor": "#d3d3d3",
+            "color": "#212121",
+            "marginBottom": 35,
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "paddingTop": 5,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="fakePassword"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 35,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 1,
+          "top": 35,
+          "width": 35,
+          "zIndex": 200,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
 </div>
 `;
