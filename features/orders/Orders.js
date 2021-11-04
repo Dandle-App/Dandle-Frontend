@@ -32,7 +32,7 @@ export const Orders = () => {
   function createOrderCard(order) {
     return (
       <OrderCard
-        key={order.id}
+        key={order.order_id}
         order={order}
       />
     );
