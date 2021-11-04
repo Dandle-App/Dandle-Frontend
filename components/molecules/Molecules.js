@@ -28,7 +28,7 @@ export const OrderCard = ({order}) => {
   const {customerName, orderDate, orderStatus, orderTotal} = order;
 
   return (
-    <View style={{backgroundColor: backgroundLight, flexDirection: 'row', borderStyle='solid', borderColor={primary}}}>
+    <View style={{backgroundColor: backgroundLight, flexDirection: 'row'}}>
       <View style={{flexDirection: 'row', padding: 10}}>
         <LeftIcon><Octicons name="package" color={primary} size={15} /></LeftIcon>
         <Text style={{marginLeft: 10}}>{customerName}</Text>
