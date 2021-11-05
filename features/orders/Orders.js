@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, VirtualizedList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import {createSlice} from '@reduxjs/toolkit';
@@ -20,7 +20,6 @@ import {
   selectOrders,
   selectOrderLoading,
 } from '../orders/orderSlice'
-import { FlatList } from "react-native-gesture-handler";
 
 
 
@@ -39,9 +38,12 @@ export const Orders = () => {
   }
   
   return (
-    <FlatList data={order_data}
+    <VirtualizedList
+      data={order_data}
       renderItem={({ item }) => createOrderCard(item)}
-      keyExtractor={item => item.order_id}
+      keyExtractor={(item) => item.order_id}
+      getItem={(data, index) => data[index]}
+      getItemCount={(data) => data.length}
     />  
   );
   console.log('time taken to create orders: ',startTime - new Date().getTime())
