@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react';
 import * as SecureStore from 'expo-secure-store';
 import { useSelector, useDispatch } from 'react-redux';
 import { setToken, selectToken, selectRefreshToken } from './userSlice';
@@ -69,15 +70,17 @@ const checkToken = () => {
 */
 
 // function that will delete a token and refresh token from react-native-keychain
-const deleteToken = () => {
-    return new Promise((resolve, reject) => {
-        const keychain = require("react-native-keychain");
-        keychain.deleteGenericPassword()
-        .then(() => {
-            resolve();
-        })
-        .catch(err => {
-            reject(err);
-        });
+export const deleteToken = () => {
+    // delete token in SecureStore
+    SecureStore.deleteItemAsync('token')
+    .then( result => {
+        console.log("Token deleted");
+        // navigate back to WelcomeScreen
+        navigation.navigate('Welcome');
+
+    })
+    .catch(err => {
+        console.log(err);
     });
+    return 'logged out'
 }

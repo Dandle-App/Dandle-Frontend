@@ -39,8 +39,9 @@ const StaffSignIn = ({navigation}) => {
                 setMessageStatus("success");
                 setMessage("sign in successful");
                 storeToken(token, refreshToken);
-                //
-                navigation.navigate("OrgHome");
+                
+                dispatch(setToken(token));
+                navigation.navigate("OrgTabs");
             }
             else if (success === false) {
                 setMessageStatus("failed");

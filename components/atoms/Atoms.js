@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
-import Constants from 'expo-constants';
-import { colors } from '../../styles/styles';
-import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
+import {colors} from '../../styles/styles';
+import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 
-//colors
-const { background, primary, secondary, textLink, 
-    textLight, textDark, backgroundLight } = colors
+// colors
+const {background, primary, secondary, textLink,
+  textLight, textDark, backgroundLight} = colors;
 
 // Form atoms
 export const TextInputField = styled.TextInput`
@@ -18,7 +17,7 @@ export const TextInputField = styled.TextInput`
     color: ${textDark};
 `;
 
-//texts
+// texts
 export const StyledInputLabel = styled.Text`
     color: ${primary};
     font-size: 16px;
@@ -30,10 +29,10 @@ export const MsgBox = styled.Text`
   text-align: center;
   font-size: 13px;
   padding: 3px;
-  color: ${props => props.type == "success" ? 'green' : 'red'};
+  color: ${(props) => props.type == 'success' ? 'green' : 'red'};
 `;
 
-//buttons and links
+// buttons and links
 export const RightIcon = styled.TouchableOpacity`
     right: 1px;
     width: 35px;
@@ -48,7 +47,7 @@ export const TextLink = styled.TouchableOpacity`
     paddingLeft: 5px;
 `;
 
-//Views
+// Views
 export const LeftIcon = styled.View`
     z-index: 1;
     position: absolute;
