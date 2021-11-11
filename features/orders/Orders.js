@@ -63,9 +63,9 @@ export const Orders = () => {
     return orders.filter(
       order =>
         order.order_id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        order.customer.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        order.progress.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        order.total.toLowerCase().includes(searchTerm.toLowerCase())
+        order.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        order.orderStatus.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        order.orderTotal.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }
   
