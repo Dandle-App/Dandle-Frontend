@@ -14,7 +14,7 @@
     "@react-navigation/native-stack": "^6.1.0",
     "@react-navigation/stack": "^6.0.7",
     "@reduxjs/toolkit": "^1.6.2",
-    "@testing-library/jest-native": "^4.0.2",
+    "@testing-library/jest-native": "^4.0.3",
     "@testing-library/react-native": "^8.0.0",
     "axios": "^0.21.4",
     "chalk": "^4.1.2",
@@ -47,6 +47,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-native": "^3.11.0",
     "jest-expo": "^42.1.0",
     "jest-styled-components": "^7.0.5"
   },

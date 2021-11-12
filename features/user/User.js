@@ -70,7 +70,7 @@ const checkToken = () => {
 */
 
 // function that will delete a token and refresh token from react-native-keychain
-export const deleteToken = (navigation) => {
+export const deleteToken = () => {
     // delete token in SecureStore
     SecureStore.deleteItemAsync('token')
     .then( result => {
@@ -82,4 +82,5 @@ export const deleteToken = (navigation) => {
     .catch(err => {
         console.log(err);
     });
+    return 'logged out'
 }
