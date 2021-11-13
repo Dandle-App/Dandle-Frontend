@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Welcome Snapshot Styled corretly 1`] = `
+Object {
+  "backgroundColor": "#630101",
+  "flexBasis": 0,
+  "flexGrow": 1,
+  "flexShrink": 1,
+  "paddingBottom": 24,
+  "paddingLeft": 24,
+  "paddingRight": 24,
+  "paddingTop": 24,
+}
+`;
+
 exports[`Welcome Snapshot renders correctly 1`] = `
 <View
   style={

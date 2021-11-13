@@ -14,6 +14,20 @@ describe('Welcome Snapshot', () => {
         const tree = renderer.create(<Welcome />).toJSON();
         expect(tree).toMatchSnapshot();
     })
+    // Test to see if styled correctly
+    it('Styled corretly', () => {
+        const style ={
+            "backgroundColor": "#630101",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingBottom": 24,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 24,
+        };
+        expect(style).toMatchSnapshot();
+    })
     /* Posible tests needed
     style tests:
         StyledContainer, InnerContainer, AppLogo, Header1
