@@ -14,4 +14,11 @@ describe('Welcome Snapshot', () => {
         const tree = renderer.create(<Welcome />).toJSON();
         expect(tree).toMatchSnapshot();
     })
+    /* Posible tests needed
+    style tests:
+        StyledContainer, InnerContainer, AppLogo, Header1
+        Header2, StyledButton, TextLink, Header3, LightContainer
+    navigation - does Continue button go the SignIn
+    navigation - does the "I am an org/comp" go OrgSignIn
+    */
 })
