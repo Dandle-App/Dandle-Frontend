@@ -14,9 +14,9 @@ describe('Welcome Snapshot', () => {
         const tree = renderer.create(<Welcome />).toJSON();
         expect(tree).toMatchSnapshot();
     })
-    // Test to see if styled correctly
-    it('Styled corretly', () => {
-        const style ={
+    // Test to see if every component is styled correctly
+    it('StyledContainer styled corretly', () => {
+        const StyledContainer ={
             "backgroundColor": "#630101",
             "flexBasis": 0,
             "flexGrow": 1,
@@ -26,11 +26,33 @@ describe('Welcome Snapshot', () => {
             "paddingRight": 24,
             "paddingTop": 24,
         };
-        expect(style).toMatchSnapshot();
+        expect(StyledContainer).toMatchSnapshot();
+    })
+    it('StatusBar styled light', () => {
+        const StatusBar = {
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "position": "relative",
+        }
+        expect(StatusBar).toMatchSnapshot();
+    })
+    it('Swiper syled', () => {
+        const Swiper = {
+            "backgroundColor": "transparent",
+        }
+        expect(Swiper).toMatchSnapshot();
+    })
+    it('AppLogo stlyed', () => {
+        const AppLogo = {
+            "height": 1334,
+            "width": 750,
+            "backgroundColor": "transparent",
+        }
+        expect(AppLogo).toMatchSnapshot();
     })
     /* Posible tests needed
     style tests:
-        StyledContainer, InnerContainer, AppLogo, Header1
+        InnerContainer, AppLogo, Header1
         Header2, StyledButton, TextLink, Header3, LightContainer
     navigation - does Continue button go the SignIn
     navigation - does the "I am an org/comp" go OrgSignIn

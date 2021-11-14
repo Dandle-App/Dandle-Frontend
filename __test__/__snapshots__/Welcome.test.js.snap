@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Welcome Snapshot Styled corretly 1`] = `
+exports[`Welcome Snapshot AppLogo stlyed 1`] = `
+Object {
+  "backgroundColor": "transparent",
+  "height": 1334,
+  "width": 750,
+}
+`;
+
+exports[`Welcome Snapshot StatusBar styled light 1`] = `
+Object {
+  "backgroundColor": "transparent",
+  "flex": 1,
+  "position": "relative",
+}
+`;
+
+exports[`Welcome Snapshot StyledContainer styled corretly 1`] = `
 Object {
   "backgroundColor": "#630101",
   "flexBasis": 0,
@@ -10,6 +26,12 @@ Object {
   "paddingLeft": 24,
   "paddingRight": 24,
   "paddingTop": 24,
+}
+`;
+
+exports[`Welcome Snapshot Swiper syled 1`] = `
+Object {
+  "backgroundColor": "transparent",
 }
 `;
 
