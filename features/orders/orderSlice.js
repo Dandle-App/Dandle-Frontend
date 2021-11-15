@@ -50,7 +50,7 @@ const orderSlice = createSlice({
       order.total -= action.payload.item.price;
     },
 
-    updateOrders: (state, action) => {
+    setOrders: (state, action) => {
       /** Set the entire orders array by assignment: O(1) */
       state.orders = action.payload;
     },
@@ -89,14 +89,14 @@ export const {
   addOrderItem,
   deleteOrder,
   deleteOrderItem,
-  updateOrders,
+  setOrders,
   updateOrderItem,
   setOrderLoading,
   setError,
 } = orderSlice.actions;
 
 
-// export 
+// selectors
 export const selectOrders = (state) => state.orders;
 export const selectOrderTotal = (state) => state.order.orderTotal;
 export const selectOrdersLoading = (state) => state.order.ordersLoading;
