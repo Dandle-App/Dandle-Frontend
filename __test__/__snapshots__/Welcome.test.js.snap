@@ -16,6 +16,31 @@ Object {
 }
 `;
 
+exports[`Welcome Snapshot StyledButton renders 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#d64547",
+      "borderRadius": 35,
+      "height": 50,
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "width": undefined,
+    }
+  }
+/>
+`;
+
 exports[`Welcome Snapshot StyledContainer styled corretly 1`] = `
 Object {
   "backgroundColor": "#630101",

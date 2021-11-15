@@ -6,6 +6,7 @@ import NavigationContainer from '@react-navigation/native';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components'
 import Welcome from '../screens/Welcome';
+import { StlyedButton } from '../styles/styles';
 
 afterEach(cleanup); 
 
@@ -57,4 +58,15 @@ describe('Welcome Snapshot', () => {
     navigation - does Continue button go the SignIn
     navigation - does the "I am an org/comp" go OrgSignIn
     */
+   it('StyledButton renders', () => {
+       const tree = renderer.create(<StlyedButton />);
+       expect(tree).toMatchSnapshot();
+   })
+   //StyledButton navigates to SignIn
+   it('navigates to SignIn', () => {
+       const push = jest.fn();
+       const { getByText } = render(<welcome navigation={{ push }}/>);
+       fireEvent.press(getByText('Continue'));
+       expect(push).toHaveBeenCalledBy('SignIn');
+   })
 })
