@@ -16,13 +16,23 @@ import { deleteToken } from "../../features/user/User";
 import axios from "axios";
 
 import {Orders} from "../../features/orders/Orders";
+import { Switch } from "react-native-gesture-handler";
 
 const OrgHomeScreen = ({navigation}) => {
+    
     return (
         <LightContainer>
             <StatusBar style="auto" />
             <PadlessContainer>
+                <Switch
+                    trackColor={{ false: "#767577", true: "#81b0ff" }}
+                    thumbColor={false ? "#f4f3f4" : "#f4f3f4"}
+                    ios_backgroundColor="#3e3e3e"
+                    onValueChange={() => {}}
+                    value={false}
+                />
                 <OrderFilter tabs={['todo','in-progress','done']}/>
+
                 <Orders/>
             </PadlessContainer>
         </LightContainer>

@@ -19,8 +19,7 @@ import {
 
   selectOrders,
   selectOrderLoading,
-} from '../orders/orderSlice'
-
+} from '../orders/orderSlice';
 
 
 export const Orders = () => {
