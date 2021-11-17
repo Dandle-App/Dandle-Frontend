@@ -34,31 +34,111 @@ describe('Welcome Snapshot', () => {
             "backgroundColor": "transparent",
             "flex": 1,
             "position": "relative",
-        }
+        };
         expect(StatusBar).toMatchSnapshot();
     })
-    it('Swiper syled', () => {
+    it('Swiper styled correctly', () => {
         const Swiper = {
             "backgroundColor": "transparent",
-        }
+        };
         expect(Swiper).toMatchSnapshot();
     })
-    it('AppLogo stlyed', () => {
-        const AppLogo = {
-            "height": 1334,
-            "width": 750,
-            "backgroundColor": "transparent",
-        }
+    it('InnerContainer styled correctly', () => {
+        const InnerContainer ={
+            "alignItems": "center",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingTop": "75%",
+            "width": "100%",
+        };
+        expect(InnerContainer).toMatchSnapshot();
+    })
+    it('AppLogo styled correctly', () => {
+        const AppLogo ={
+            "height": 77,
+            "width": 66,
+        };
         expect(AppLogo).toMatchSnapshot();
     })
-    /* Posible tests needed
-    style tests:
-        InnerContainer, AppLogo, Header1
-        Header2, StyledButton, TextLink, Header3, LightContainer
-    navigation - does Continue button go the SignIn
-    navigation - does the "I am an org/comp" go OrgSignIn
-    */
-   it('StyledButton renders', () => {
+    it('Header1 styled correctly', () => {
+        const Header1 ={
+            "color": "#f38484",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "paddingTop": 42,
+        };
+        expect(Header1).toMatchSnapshot();
+    })
+    it('Header2 styled correctly', () => {
+        const Header2 ={
+            "color": "#f38484",
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "paddingBottom": 10,
+            "paddingTop": 5,
+        };
+        expect(Header2).toMatchSnapshot();
+    })
+    it('Pad_h_medium styled correctly', () => {
+        const Pad_h_medium ={
+            "height": 45,
+        };
+        expect(Pad_h_medium).toMatchSnapshot();
+    })
+    it('LightContainer styled correctly', () => {
+        const LightContainer ={
+            "backgroundColor": "#f5f5f5",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+        };
+        expect(LightContainer).toMatchSnapshot();
+    })
+    it('Video styled correctly', () => {
+        const Video ={
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+        };
+        expect(Video).toMatchSnapshot();
+    })
+    it('StyledButton styled correctly', () => {
+        const StyledButton ={
+            "alignItems": "center",
+            "backgroundColor": "#d64547",
+            "borderRadius": 35,
+            "height": 50,
+            "justifyContent": "space-around",
+            "opacity": 1,
+            "width": "100%",
+        };
+        expect(StyledButton).toMatchSnapshot();
+    })
+    it('TextLink styled corretly', () => {
+        const TextLink ={
+            "alignItems": "center",
+            "color": "#f38484",
+            "opacity": 1,
+            "paddingLeft": 5,
+        };
+        expect(TextLink).toMatchSnapshot();
+    })
+    it('Header3 styled correctly', () => {
+        const Header3 ={
+            "color": "#f38484",
+            "fontSize": 12,
+            "fontWeight": "bold",
+        };
+        expect(Header3).toMatchSnapshot();
+    })
+   /*it('StyledButton renders', () => {
        const tree = renderer.create(<StlyedButton />);
        expect(tree).toMatchSnapshot();
    })
@@ -68,5 +148,5 @@ describe('Welcome Snapshot', () => {
        const { getByText } = render(<welcome navigation={{ push }}/>);
        fireEvent.press(getByText('Continue'));
        expect(push).toHaveBeenCalledBy('SignIn');
-   })
+   })*/
 })
