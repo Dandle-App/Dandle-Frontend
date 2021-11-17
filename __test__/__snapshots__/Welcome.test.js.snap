@@ -7,6 +7,20 @@ Object {
 }
 `;
 
+exports[`Welcome Snapshot Header 3 renders 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#f38484",
+        "fontSize": 12,
+        "fontWeight": "bold",
+      },
+    ]
+  }
+/>
+`;
+
 exports[`Welcome Snapshot Header1 styled correctly 1`] = `
 Object {
   "color": "#f38484",
@@ -70,6 +84,31 @@ Object {
   "flex": 1,
   "position": "relative",
 }
+`;
+
+exports[`Welcome Snapshot StyledButton renders 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#d64547",
+      "borderRadius": 35,
+      "height": 50,
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "width": undefined,
+    }
+  }
+/>
 `;
 
 exports[`Welcome Snapshot StyledButton styled correctly 1`] = `

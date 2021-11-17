@@ -6,7 +6,7 @@ import NavigationContainer from '@react-navigation/native';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components'
 import Welcome from '../screens/Welcome';
-import { StlyedButton } from '../styles/styles';
+import { Header3, StlyedButton } from '../styles/styles';
 
 afterEach(cleanup); 
 
@@ -138,15 +138,30 @@ describe('Welcome Snapshot', () => {
         };
         expect(Header3).toMatchSnapshot();
     })
-   /*it('StyledButton renders', () => {
+    // Buttons (Touchable Opacities) render
+    it('StyledButton renders', () => {
        const tree = renderer.create(<StlyedButton />);
        expect(tree).toMatchSnapshot();
-   })
-   //StyledButton navigates to SignIn
-   it('navigates to SignIn', () => {
-       const push = jest.fn();
-       const { getByText } = render(<welcome navigation={{ push }}/>);
-       fireEvent.press(getByText('Continue'));
-       expect(push).toHaveBeenCalledBy('SignIn');
-   })*/
+    })
+    it('Header 3 renders', () => {
+        const tree = renderer.create(<Header3 />);
+        expect(tree).toMatchSnapshot();
+    })
+   /* Buttons (Touchable Opacities) navigate correct
+      Continue > SignIn
+      I am an organization/company > OrgSignIn
+    */
+    it('StyledButton(s) navigate to SignIn', () => {
+        const push = jest.fn();;
+        const { getByText } = render(<Welcome navigation={{ push }} />);
+        fireEvent.press(getByText('Continue'));
+        expect(push).toBeCalledWith('SignIn');
+    })
+    it('I am an organization/company navigate to OrgSignIn', () => {
+        const push = jest.fn();
+        const { getByText } = render(<Welcome navigation={{ push }} />);
+        fireEvent.press(getByText('I am an organization/company'));
+        expect(push).toBeCalledWith('OrgSignIn');
+    })
+
 })
