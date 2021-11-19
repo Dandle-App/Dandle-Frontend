@@ -53,7 +53,7 @@ const Welcome = ({navigation}) => {
             onPress={()=>navigation.navigate('SignIn')}
             width='100%'
           >
-            <Text>Continue</Text>
+            <Text>Lets Start</Text>
           </StlyedButton>
           <TextLink onPress={()=>navigation.navigate("OrgSignIn")}>
             <Header3>I am an organization/company</Header3>

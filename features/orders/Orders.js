@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ScrollView, VirtualizedList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
@@ -12,21 +12,19 @@ import {
   addOrderItem,
   deleteOrder,
   deleteOrderItem,
-  updateOrder,
+  setOrders,
   updateOrderItem,
   setOrderLoading,
   setOrderStatus,
 
   selectOrders,
   selectOrderLoading,
-} from '../orders/orderSlice'
-
+} from '../orders/orderSlice';
 
 
 export const Orders = () => {
-  const dispatch = useDispatch();
   let order_data = orderData;
-  let startTime = new Date().getTime();
+  const dispatch = useDispatch();
 
   function createOrderCard(order) {
     /**
@@ -40,16 +38,6 @@ export const Orders = () => {
         order={order}
       />
     );
-  }
-
-  function filterOrders_byProgress(orders, progress) {
-    /**
-     * @param {Array} orders
-     * @param {String} progress
-     * @return {Array}
-     * @description This function filters the orders by progress
-     */
-    return orders.filter(order => order.progress === progress);
   }
 
   function filterOrders_bySearch(orders, searchTerm) {
@@ -78,7 +66,6 @@ export const Orders = () => {
       getItemCount={(data) => data.length}
     />  
   );
-  console.log('time taken to create orders: ',startTime - new Date().getTime())
 
 }
 

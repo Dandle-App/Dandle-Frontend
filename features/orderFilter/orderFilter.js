@@ -1,7 +1,10 @@
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 import { OrderProgressTab } from '../../components/molecules/Molecules';
 import { colors, TextLight } from '../../styles/styles';
+import { selectOrders, setOrders } from '../orders/orderSlice';
+import { orderData } from '../orders/orderData';
 
 const {background, primary, textLight, textDark} = colors;
 
@@ -12,13 +15,19 @@ export const OrderFilter = ({
     ...props
 }) => {
     
-    const [activeTabIndex, setActiveTabIndex] = React.useState(0);
-    const [selectedTab, setSelectedTab] = React.useState(tabs[0]);
-    
-    function handleTabPress(index) {
-        setActiveTabIndex(index);
+    const [selectedTab, setSelectedTab] = React.useState(0)
+    const dispatch = useDispatch();
+    const order_data = useSelector(selectOrders);
+
+    function handleTabPress(index, tab) {
+      /**
+       * @param {number} index - index of the tab
+       * @param {string} tab - name of the tab
+       * @returns {void}
+       */
         setSelectedTab(index);
     }
+
     return (
         <View style={{flexDirection: 'row', width:'90%'}}>
           {tabs.map((tab, index) => {
@@ -36,7 +45,7 @@ export const OrderFilter = ({
                   borderColor: '#ccc',
                   marginRight: 5, marginLeft: 5,
                 }}
-                onPress={() => handleTabPress(index)}
+                onPress={() => handleTabPress(index, tab)}
               >
                 <Text style={{color: selectedTab === index ? textLight : textDark}}>{tab}</Text>
               </TouchableOpacity>
