@@ -13,6 +13,7 @@ import StaffSignUp from '../screens/StaffSignUp';
 
 import OrgSignIn from '../screens/OrgSignIn';
 import OrgSignUp from '../screens/OrgSignUp';
+import OrgHomeScreen from '../screens/org/OrgHomeScreen';
 
 import OrgTabs from '../components/molecules/OrgTabs';
 import TestScreen from '../screens/org/TestScreen';

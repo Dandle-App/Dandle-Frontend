@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Octicons} from '@expo/vector-icons';
 
-//screens
+// screens
 import OrgSettings from '../../screens/org/OrgSettings';
 import OrgHomeScreen from '../../screens/org/OrgHomeScreen';
 import OrgAnalytics from '../../screens/org/OrgAnalytics';
@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 
 export default function OrgTabs() {
   return (
-    <NavigationContainer 
+    <NavigationContainer
       independent={true}
     >
       <Tab.Navigator
@@ -22,57 +22,57 @@ export default function OrgTabs() {
           tabBarShowLabel: false,
           tabBarStyle: {
             position: 'absolute',
-            backgroundColor: '#f38484', 
+            backgroundColor: '#f38484',
             borderTopRightRadius: 2,
             borderTopLeftRadius: 2,
           },
-          headerTransparent : true,
+          headerTransparent: true,
           headerShown: false,
           tabBarActiveBackgroundColor: '#d64547',
         }}
       >
-        <Tab.Screen 
-          name="Settings" 
+        <Tab.Screen
+          name="Settings"
           component={OrgSettings}
           options={{
             tabBarIcon: () => {
-              return(
+              return (
                 <Octicons name='gear' size={25} color='white'/>
-              )
-            }
+              );
+            },
           }}
         />
-        <Tab.Screen 
-          name="Home" 
+        <Tab.Screen
+          name="Home"
           component={OrgHomeScreen}
           options={{
             tabBarIcon: () => {
-              return(
+              return (
                 <Octicons name='home' size={25} color='white'/>
-              )
-            }
-          }} 
-        />
-        <Tab.Screen 
-          name="Chat" 
-          component={OrgChat} 
-          options={{
-            tabBarIcon: ({size,focused,color}) => {
-              return(
-                <Octicons name='comment-discussion' size={25} color='white'/>
-              )
-            }
+              );
+            },
           }}
         />
-        <Tab.Screen 
-          name="Analytics" 
-          component={OrgAnalytics} 
+        <Tab.Screen
+          name="Chat"
+          component={OrgChat}
           options={{
-            tabBarIcon: ({size,focused,color}) => {
-              return(
+            tabBarIcon: ({size, focused, color}) => {
+              return (
+                <Octicons name='comment-discussion' size={25} color='white'/>
+              );
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Analytics"
+          component={OrgAnalytics}
+          options={{
+            tabBarIcon: ({size, focused, color}) => {
+              return (
                 <Octicons name='graph' size={25} color='white'/>
-              )
-            }
+              );
+            },
           }}
         />
       </Tab.Navigator>

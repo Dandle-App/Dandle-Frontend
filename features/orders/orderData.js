@@ -256,7 +256,7 @@ export function generateOrder(arr,n){
         };
         arr.push(order);
     }
-    // time taken to generate 1000 orders
+    // time taken to generate orders
     const end = new Date().getTime();
     console.log(`Time to load orders: ${end - start}ms`);
 }
