@@ -28,6 +28,16 @@ export const OrderFilter = ({
         setSelectedTab(index);
     }
 
+    function filterOrders(tab) {
+        /**
+         * @param {string} tab - name of the tab
+         * @returns {array} filteredOrders - array of orders filtered by the tab
+         * @description Filters the orders by the tab name
+         * */
+        const filteredOrders = order_data.filter(order => order.status === tab);
+        return filteredOrders;
+    }
+
     return (
         <View style={{flexDirection: 'row', width:'90%'}}>
           {tabs.map((tab, index) => {
