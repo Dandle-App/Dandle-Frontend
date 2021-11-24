@@ -65,7 +65,7 @@ const orderSlice = createSlice({
     },
 
 
-    setOrderLoading: (state, action) => {
+    setOrdersLoading: (state, action) => {
       /** Set order loading state */
       state.orderLoading = action.payload;
     },
@@ -91,7 +91,8 @@ export const {
   deleteOrderItem,
   setOrders,
   updateOrderItem,
-  setOrderLoading,
+  setOrdersLoading,
+  setOrderStatus,
   setError,
 } = orderSlice.actions;
 
