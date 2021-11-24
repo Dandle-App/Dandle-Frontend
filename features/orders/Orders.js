@@ -14,7 +14,7 @@ import {
   deleteOrderItem,
   setOrders,
   updateOrderItem,
-  setOrderLoading,
+  setOrdersLoading,
   setOrderStatus,
 
   selectOrders,
