@@ -9,13 +9,20 @@ import OrgSignUp from '../screens/OrgSignUp';
 
 /* 
 Jest Snapshots : https://jestjs.io/docs/snapshot-testing
-To update a snapshot due to changed implementation: jest --updateSnapshot
+To update a snapshot due to changed implementation: npm test -- --updateSnapshot
 */
 afterEach(cleanup);
 
-describe('OrgSignUp Snapshot', () => {
+describe('OrgSignUp', () => {
   it('renders correctly', () => {
       const tree = renderer.create(<OrgSignUp />).toJSON();
       expect(tree).toMatchSnapshot();
+  });
+  it('handle submit', () => {
+      /* STUB
+      onSubmit={(values) => {
+          navigation.navigate("OrgSignIn");
+          handleSubmit(values);*/
+      expect(true).toBe(true);
   });
 });

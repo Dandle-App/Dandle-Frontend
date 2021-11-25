@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms MsgBox 1`] = `
+<div>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "green",
+          "fontSize": 13,
+          "paddingBottom": 3,
+          "paddingLeft": 3,
+          "paddingRight": 3,
+          "paddingTop": 3,
+          "textAlign": "center",
+        },
+      ]
+    }
+    type="success"
+  >
+    success
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "red",
+          "fontSize": 13,
+          "paddingBottom": 3,
+          "paddingLeft": 3,
+          "paddingRight": 3,
+          "paddingTop": 3,
+          "textAlign": "center",
+        },
+      ]
+    }
+    type="fail"
+  >
+    fail
+  </Text>
+</div>
+`;
