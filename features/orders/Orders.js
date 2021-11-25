@@ -19,13 +19,14 @@ import {
   selectOrders,
   selectOrdersLoading,
 } from '../orders/orderSlice';
+import { selectFilteredOrders, setFilteredOrders } from "../orderFilter/orderFilterSlice";
 
 
 export const Orders = () => {
   const dispatch = useDispatch();
-  const orders_in_store = useSelector(selectOrders);
+  const allOrders = useSelector(selectOrders);
   const ordersLoading = useSelector(selectOrdersLoading);
-  const [ordersState, setOrdersState] = React.useState([]);
+  const filteredOrders = useSelector(selectFilteredOrders);
   
   useEffect(() => {
     dispatch(setOrdersLoading(true));
@@ -53,7 +54,7 @@ export const Orders = () => {
     ( <ActivityIndicator size="large" color="#0000ff" />)
     : 
     (<VirtualizedList
-      data={orders_in_store}
+      data={filteredOrders}
       renderItem={({ item }) => createOrderCard(item)}
       keyExtractor={(item) => item.order_id}
       getItem={(data, index) => data[index]}

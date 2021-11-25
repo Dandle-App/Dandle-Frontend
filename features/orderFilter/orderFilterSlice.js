@@ -7,7 +7,7 @@ const orderFilterSlice = createSlice({
             status: "",
         },
         filteredOrders: [],
-        ordersLoading: false,
+        filteredOrdersLoading: false,
         error: null,
     },
     reducers: {
@@ -41,7 +41,7 @@ export const {
 // selectors
 export const selectFilter = (state) => state.orderFilter.filter;
 export const selectFilteredOrders = (state) => state.orderFilter.filteredOrders;
-export const selectOrdersLoading = (state) => state.orderFilter.ordersLoading;
+export const selectFilteredOrdersLoading = (state) => state.orderFilter.filteredOrdersLoading;
 export const orderFilterError = (state) => state.orderFilter.error;
 
 export default orderFilterSlice.reducer;
