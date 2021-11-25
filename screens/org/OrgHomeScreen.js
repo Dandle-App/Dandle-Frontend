@@ -9,7 +9,7 @@ import {
         AppLogo, StlyedButton,
         Pad_h_medium, Pad_h_small, Pad_w_small } from "../../styles/styles";
 import { TextLink } from "../../components/atoms/Atoms";
-import { OrderFilter, StyldTextInput } from "../../features/orderFilter/orderFilter";
+import { OrderFilter } from "../../features/orderFilter/orderFilter";
 import { StyledFormArea } from "../../components/organisms/Organisms";
 
 import { deleteToken } from "../../features/user/User";
@@ -48,7 +48,6 @@ const OrgHomeScreen = ({navigation}) => {
                     value={isSwitchOn}
                 />
                 <OrderFilter tabs={['todo','in-progress','done']}/>
-
                 <Orders/>
             </PadlessContainer>
         </LightContainer>

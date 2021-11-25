@@ -83,7 +83,7 @@ const orderSlice = createSlice({
 
 });
 
-// export action creators
+// reducers
 export const {
   addOrder,
   addOrderItem,
@@ -98,7 +98,7 @@ export const {
 
 
 // selectors
-export const selectOrders = (state) => state.orders;
+export const selectOrders = (state) => state.order.orders;
 export const selectOrderTotal = (state) => state.order.orderTotal;
 export const selectOrdersLoading = (state) => state.order.ordersLoading;
 export const orderError = (state) => state.order.error;

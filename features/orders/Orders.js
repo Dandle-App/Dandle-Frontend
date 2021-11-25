@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
+import { ActivityIndicator } from "react-native";
 import { ScrollView, VirtualizedList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-import {createSlice} from '@reduxjs/toolkit';
 import { Socket } from "socket.io-client";
 
 import { OrderCard } from "../../components/molecules/Molecules";
@@ -18,13 +17,23 @@ import {
   setOrderStatus,
 
   selectOrders,
-  selectOrderLoading,
+  selectOrdersLoading,
 } from '../orders/orderSlice';
+import { selectFilteredOrders, setFilteredOrders } from "../orderFilter/orderFilterSlice";
 
 
 export const Orders = () => {
-  let order_data = orderData;
   const dispatch = useDispatch();
+  const allOrders = useSelector(selectOrders);
+  const ordersLoading = useSelector(selectOrdersLoading);
+  const filteredOrders = useSelector(selectFilteredOrders);
+  
+  useEffect(() => {
+    dispatch(setOrdersLoading(true));
+    dispatch(setOrders(orderData));
+    dispatch(setOrdersLoading(false));
+  }, []);
+
 
   function createOrderCard(order) {
     /**
@@ -39,32 +48,18 @@ export const Orders = () => {
       />
     );
   }
-
-  function filterOrders_bySearch(orders, searchTerm) {
-    /**
-     * @param {Array} orders
-     * @param {String} searchTerm
-     * @return {Array}
-     * @description This function filters the orders by search term as the
-     * user types in the search bar
-     * */
-    return orders.filter(
-      order =>
-        order.order_id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        order.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        order.orderStatus.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        order.orderTotal.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }
   
   return (
-    <VirtualizedList
-      data={order_data}
+    ordersLoading ? 
+    ( <ActivityIndicator size="large" color="#0000ff" />)
+    : 
+    (<VirtualizedList
+      data={filteredOrders}
       renderItem={({ item }) => createOrderCard(item)}
       keyExtractor={(item) => item.order_id}
       getItem={(data, index) => data[index]}
       getItemCount={(data) => data.length}
-    />  
+    /> ) 
   );
 
 }
