@@ -12,6 +12,7 @@ export const colors = {
     textLight: '#f5f5f5',
     textDark: '#212121',
     backgroundLight: '#f5f5f5',
+    borderColorDark: '#9e9e9e'
 };
 const { background, primary, secondary, textLink, 
         textLight, textDark, backgroundLight } = colors;

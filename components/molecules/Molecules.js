@@ -6,7 +6,7 @@ import {
 } from '../atoms/Atoms';
 
 import {colors} from '../../styles/styles';
-const {background, primary, secondary, textLink,
+const {background, borderColorDark, primary, secondary, textLink,
   textLight, textDark, backgroundLight} = colors;
 
 import {Octicons} from '@expo/vector-icons';
@@ -25,22 +25,16 @@ export const StyldTextInput = ({label, icon, isPassword, hidePassword, setHidePa
 };
 
 export const OrderCard = ({order}) => {
-  const {customerName, orderDate, orderStatus, orderTotal} = order;
+  const {customerName, customerCity, customerId, orderDate, orderStatus, orderTotal} = order;
 
   return (
-    <View style={{backgroundColor: backgroundLight, flexDirection: 'row'}}>
+    <View style={{backgroundColor: backgroundLight, borderColor: borderColorDark, borderWidth: 1,  marginBottom: 10, borderRadius: 25}}>
       <View style={{flexDirection: 'row', padding: 10}}>
-        <LeftIcon><Octicons name="package" color={primary} size={15} /></LeftIcon>
-        <Text style={{marginLeft: 10}}>{customerName}</Text>
+        <Text style={{marginLeft: 10}}>productImage</Text>
+        <Text style={{marginLeft: 10}}>room #</Text>
+        <Text style={{marginLeft: 10, marginRight: 10}}>orderTime</Text>
       </View>
-      <View style={{flexDirection: 'row', padding: 10}}>
-        <LeftIcon><Octicons name="calendar" color={primary} size={15} /></LeftIcon>
-        <Text style={{marginLeft: 10}}>{orderDate}</Text>
-      </View>
-      <View style={{flexDirection: 'row', padding: 10}}>
-        <LeftIcon><Octicons name="credit-card" color={primary} size={15} /></LeftIcon>
-        <Text style={{marginLeft: 10}}>{orderTotal}</Text>
-      </View>
+      <Text style={{marginLeft: 25, paddingBottom: 10}}>productName</Text>
     </View>
   );
 };
