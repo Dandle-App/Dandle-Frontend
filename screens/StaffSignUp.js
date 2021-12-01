@@ -23,7 +23,7 @@ const StaffSignUp = ({navigation}) => {
     const handleSubmit = (values) => {
         
         console.log(values);
-        const url = "http://192.168.1.68:3000/signup/staff";
+        const url = "https://dandle.dustinc.dev/signup/staff";
         axios.post(url, values)
         .then(res => {
             const response = res.data;
