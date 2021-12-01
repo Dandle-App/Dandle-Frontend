@@ -28,7 +28,8 @@ export const OrderCard = ({order}) => {
   const {customerName, customerCity, customerId, orderDate, orderStatus, orderTotal} = order;
 
   return (
-    <View style={{backgroundColor: backgroundLight, borderColor: borderColorDark, borderWidth: 1,  marginBottom: 10, borderRadius: 25}}>
+    <View style={{backgroundColor: backgroundLight, borderColor: borderColorDark, borderWidth: 1,  
+                  marginBottom: 10, borderRadius: 25, width: '100%'}}>
       <View style={{flexDirection: 'row', padding: 10}}>
         <Text style={{marginLeft: 10}}>productImage</Text>
         <Text style={{marginLeft: 10}}>room #</Text>
