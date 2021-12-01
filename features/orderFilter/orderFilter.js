@@ -97,7 +97,7 @@ export const OrderFilter = ({
             backgroundColor: backgroundLight,
             borderWidth: 1,
             borderRadius: 20,
-            borderColor: primary,
+            borderColor: '#ccc',
             marginTop: 10,
             height: 35,
             marginBottom: 10,
