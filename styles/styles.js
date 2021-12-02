@@ -54,9 +54,10 @@ export const SignUp = styled.View`
 `;
 export const PadlessContainer = styled.View`
     flex: 1;
+    flexGrow: 2;
     width: 100%;
     background-color: ${backgroundLight};
-    align-items: center;
+    align-self: center;
     padding: 24px;
     paddingTop:25%;
 `;

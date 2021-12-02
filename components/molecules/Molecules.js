@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {
   TextInputField, StyledInputLabel, RightIcon,
   LeftIcon,
@@ -25,17 +25,17 @@ export const StyldTextInput = ({label, icon, isPassword, hidePassword, setHidePa
 };
 
 export const OrderCard = ({order}) => {
-  const {customerName, customerCity, customerId, orderDate, orderStatus, orderTotal} = order;
+  const {customerName, customerCity, customerId, orderDate, orderStatus, orderTotal, orderItems, orderImage} = order;
 
   return (
     <View style={{backgroundColor: backgroundLight, borderColor: borderColorDark, borderWidth: 1,  
                   marginBottom: 10, borderRadius: 25, width: '100%'}}>
-      <View style={{flexDirection: 'row', padding: 10}}>
-        <Text style={{marginLeft: 10}}>productImage</Text>
-        <Text style={{marginLeft: 10}}>room #</Text>
-        <Text style={{marginLeft: 10, marginRight: 10}}>orderTime</Text>
+      <View style={{flexDirection: 'row', padding: 10, justifyContent: 'center', alignItems: 'center'}}>
+        <Image source={{orderImage}} style={{width: '33%'}}/>
+        <Text style={{width: '33%', fontWeight: 'bold', textAlign: 'center'}}>{orderStatus}</Text>
+        <Text style={{width: '33%', textAlign: 'center', color: borderColorDark}}>{orderDate}</Text>
       </View>
-      <Text style={{marginLeft: 25, paddingBottom: 10}}>productName</Text>
+      <Text style={{marginLeft: 20, paddingBottom: 10, color: borderColorDark}}>productNmae</Text>
     </View>
   );
 };
