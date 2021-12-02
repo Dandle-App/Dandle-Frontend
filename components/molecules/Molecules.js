@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {
   TextInputField, StyledInputLabel, RightIcon,
   LeftIcon,
 } from '../atoms/Atoms';
 
 import {colors} from '../../styles/styles';
-const {background, primary, secondary, textLink,
+const {background, borderColorDark, primary, secondary, textLink,
   textLight, textDark, backgroundLight} = colors;
 
 import {Octicons} from '@expo/vector-icons';
@@ -25,22 +25,17 @@ export const StyldTextInput = ({label, icon, isPassword, hidePassword, setHidePa
 };
 
 export const OrderCard = ({order}) => {
-  const {customerName, orderDate, orderStatus, orderTotal} = order;
+  const {customerName, customerCity, customerId, orderDate, orderStatus, orderTotal, orderItems, orderImage} = order;
 
   return (
-    <View style={{backgroundColor: backgroundLight, flexDirection: 'row'}}>
-      <View style={{flexDirection: 'row', padding: 10}}>
-        <LeftIcon><Octicons name="package" color={primary} size={15} /></LeftIcon>
-        <Text style={{marginLeft: 10}}>{customerName}</Text>
+    <View style={{backgroundColor: backgroundLight, borderColor: borderColorDark, borderWidth: 1,  
+                  marginBottom: 10, borderRadius: 25, width: '100%'}}>
+      <View style={{flexDirection: 'row', padding: 10, justifyContent: 'center', alignItems: 'center'}}>
+        <Image source={{orderImage}} style={{width: '33%'}}/>
+        <Text style={{width: '33%', fontWeight: 'bold', textAlign: 'center'}}>{orderStatus}</Text>
+        <Text style={{width: '33%', textAlign: 'center', color: borderColorDark}}>{orderDate}</Text>
       </View>
-      <View style={{flexDirection: 'row', padding: 10}}>
-        <LeftIcon><Octicons name="calendar" color={primary} size={15} /></LeftIcon>
-        <Text style={{marginLeft: 10}}>{orderDate}</Text>
-      </View>
-      <View style={{flexDirection: 'row', padding: 10}}>
-        <LeftIcon><Octicons name="credit-card" color={primary} size={15} /></LeftIcon>
-        <Text style={{marginLeft: 10}}>{orderTotal}</Text>
-      </View>
+      <Text style={{marginLeft: 20, paddingBottom: 10, color: borderColorDark}}>productNmae</Text>
     </View>
   );
 };
