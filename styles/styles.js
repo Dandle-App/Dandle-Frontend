@@ -11,8 +11,11 @@ export const colors = {
     textLink: '#f38484',
     textLight: '#f5f5f5',
     textDark: '#212121',
-    backgroundLight: '#f5f5f5',
-    borderColorDark: '#9e9e9e'
+    backgroundLight: '#fafafa',
+    borderColorDark: '#9e9e9e',
+    bgWhite: '#ffffff',
+    textGrayLight: '#bdbdbd',
+    textGray: '#9e9e9e',
 };
 const { background, primary, secondary, textLink, 
         textLight, textDark, backgroundLight } = colors;

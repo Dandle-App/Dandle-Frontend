@@ -7,7 +7,8 @@ import { colors, TextLight } from '../../styles/styles';
 import { selectOrders } from '../orders/orderSlice';
 import { selectFilter, setFilteredOrders } from './orderFilterSlice';
 
-const {background, backgroundLight, primary, textLight, textDark} = colors;
+const {background, backgroundLight, primary, textLight, 
+  textDark, bgWhite} = colors;
 
 export const OrderFilter = ({
     onPressTab,
@@ -56,7 +57,7 @@ export const OrderFilter = ({
     }
 
     return (
-      <View>
+      <View style={{paddingBottom:20}}>
         <View style={{flexDirection: 'row', width:'90%'}}>
           {tabs.map((tab, index) => {
             return (
@@ -94,10 +95,10 @@ export const OrderFilter = ({
             marginBottom: 10,
           }}
           inputContainerStyle={{
-            backgroundColor: backgroundLight,
+            backgroundColor: bgWhite,
             borderWidth: 1,
             borderRadius: 20,
-            borderColor: primary,
+            borderColor: '#ccc',
             marginTop: 10,
             height: 35,
             marginBottom: 10,

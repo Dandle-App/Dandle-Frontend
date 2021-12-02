@@ -151,6 +151,7 @@ describe('Welcome Snapshot', () => {
       Continue > SignIn
       I am an organization/company > OrgSignIn
     */
+   /*  
     it('StyledButton(s) navigate to SignIn', () => {
         const push = jest.fn();;
         const { getByText } = render(<Welcome navigation={{ push }} />);
@@ -163,5 +164,5 @@ describe('Welcome Snapshot', () => {
         fireEvent.press(getByText('I am an organization/company'));
         expect(push).toBeCalledWith('OrgSignIn');
     })
-
+    */
 })
