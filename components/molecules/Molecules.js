@@ -7,7 +7,7 @@ import {
 
 import {colors} from '../../styles/styles';
 const {background, borderColorDark, primary, secondary, textLink,
-  textLight, textDark, backgroundLight} = colors;
+  textLight, textDark, backgroundLight, bgWhite, textGrayLight} = colors;
 
 import {Octicons} from '@expo/vector-icons';
 
@@ -28,14 +28,25 @@ export const OrderCard = ({order}) => {
   const {customerName, customerCity, customerId, orderDate, orderStatus, orderTotal, orderItems, orderImage} = order;
 
   return (
-    <View style={{backgroundColor: backgroundLight, borderColor: borderColorDark, borderWidth: 1,  
-                  marginBottom: 10, borderRadius: 25, width: '100%'}}>
-      <View style={{flexDirection: 'row', padding: 10, justifyContent: 'center', alignItems: 'center'}}>
-        <Image source={{orderImage}} style={{width: '33%'}}/>
-        <Text style={{width: '33%', fontWeight: 'bold', textAlign: 'center'}}>{orderStatus}</Text>
-        <Text style={{width: '33%', textAlign: 'center', color: borderColorDark}}>{orderDate}</Text>
+    <View style={{backgroundColor: bgWhite, borderColor: borderColorDark, borderWidth: 1,  
+            marginBottom: 30, borderRadius: 25, width: '100%', paddingTop:'10%'}}>
+
+      <View style={{flexDirection: 'row', padding: 10, alignItems: 'center'}}>
+        <Image
+          source={{uri:"https://cdn.pixabay.com/photo/2020/05/17/04/22/pizza-5179939_960_720.jpg"}}
+          style={{width: 60, height:60, borderRadius:6}}/>
+
+        <Text style={{width:'48%', fontWeight:'bold', textAlign:'center',
+            fontSize:18, fontFamily:'Roboto'}}>
+          {orderStatus}
+        </Text>
+        <Text style={{width: '33%', textAlign: 'right', fontSize: 12, fontWeight: 'bold',
+            color: textGrayLight}}>
+          {orderDate}
+        </Text>
       </View>
-      <Text style={{marginLeft: 20, paddingBottom: 10, color: borderColorDark}}>productNmae</Text>
+      <Text style={{marginLeft: 20, paddingBottom: 10, fontSize: 13,
+        color: textGrayLight, fontWeight:'bold'}}>{customerName}</Text>
     </View>
   );
 };
