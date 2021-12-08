@@ -52,7 +52,6 @@ const RootStack = () => {
 
                     // auth screens
                     (<Stack.Group>
-                      <Stack.Screen name="OrgTabs" component={OrgTabs} />
                       <Stack.Screen name="Welcome" component={Welcome} />
                       <Stack.Screen name="SignIn" component={SignIn} />
                       <Stack.Screen name="UserSignIn" component={UserSignIn} />
@@ -60,6 +59,7 @@ const RootStack = () => {
                       <Stack.Screen name="StaffSignUp" component={StaffSignUp} />
                       <Stack.Screen name="OrgSignIn" component={OrgSignIn} />
                       <Stack.Screen name="OrgSignUp" component={OrgSignUp} />
+                      <Stack.Screen name="OrgTabs" component={OrgTabs} />
                     </Stack.Group>
                     )
         }
