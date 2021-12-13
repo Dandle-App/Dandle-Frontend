@@ -1,0 +1,980 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+
+exports[`Welcome Snapshot AppLogo styled correctly 1`] = `
+Object {
+  "height": 77,
+  "width": 66,
+}
+`;
+
+exports[`Welcome Snapshot Header 3 renders 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#f38484",
+        "fontSize": 12,
+        "fontWeight": "bold",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Welcome Snapshot Header1 styled correctly 1`] = `
+Object {
+  "color": "#f38484",
+  "fontSize": 20,
+  "fontWeight": "bold",
+  "paddingTop": 42,
+}
+`;
+
+exports[`Welcome Snapshot Header2 styled correctly 1`] = `
+Object {
+  "color": "#f38484",
+  "fontSize": 12,
+  "fontWeight": "bold",
+  "paddingBottom": 10,
+  "paddingTop": 5,
+}
+`;
+
+exports[`Welcome Snapshot Header3 styled correctly 1`] = `
+Object {
+  "color": "#f38484",
+  "fontSize": 12,
+  "fontWeight": "bold",
+}
+`;
+
+exports[`Welcome Snapshot InnerContainer styled correctly 1`] = `
+Object {
+  "alignItems": "center",
+  "flexBasis": 0,
+  "flexGrow": 1,
+  "flexShrink": 1,
+  "paddingTop": "75%",
+  "width": "100%",
+}
+`;
+
+exports[`Welcome Snapshot LightContainer styled correctly 1`] = `
+Object {
+  "backgroundColor": "#f5f5f5",
+  "flexBasis": 0,
+  "flexGrow": 1,
+  "flexShrink": 1,
+  "paddingBottom": 0,
+  "paddingLeft": 0,
+  "paddingRight": 0,
+  "paddingTop": 0,
+}
+`;
+
+exports[`Welcome Snapshot Pad_h_medium styled correctly 1`] = `
+Object {
+  "height": 45,
+}
+`;
+
+exports[`Welcome Snapshot StatusBar styled light 1`] = `
+Object {
+  "backgroundColor": "transparent",
+  "flex": 1,
+  "position": "relative",
+}
+`;
+
+exports[`Welcome Snapshot StyledButton renders 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#d64547",
+      "borderRadius": 35,
+      "height": 50,
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Welcome Snapshot StyledButton styled correctly 1`] = `
+Object {
+  "alignItems": "center",
+  "backgroundColor": "#d64547",
+  "borderRadius": 35,
+  "height": 50,
+  "justifyContent": "space-around",
+  "opacity": 1,
+  "width": "100%",
+}
+`;
+
+exports[`Welcome Snapshot StyledContainer styled corretly 1`] = `
+Object {
+  "backgroundColor": "#630101",
+  "flexBasis": 0,
+  "flexGrow": 1,
+  "flexShrink": 1,
+  "paddingBottom": 24,
+  "paddingLeft": 24,
+  "paddingRight": 24,
+  "paddingTop": 24,
+}
+`;
+
+exports[`Welcome Snapshot Swiper styled correctly 1`] = `
+Object {
+  "backgroundColor": "transparent",
+}
+`;
+
+exports[`Welcome Snapshot TextLink styled corretly 1`] = `
+Object {
+  "alignItems": "center",
+  "color": "#f38484",
+  "opacity": 1,
+  "paddingLeft": 5,
+}
+`;
+
+exports[`Welcome Snapshot Video styled correctly 1`] = `
+Object {
+  "bottom": 0,
+  "left": 0,
+  "position": "absolute",
+  "right": 0,
+  "top": 0,
+}
+`;
+
+exports[`Welcome Snapshot renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#630101",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": 24,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTScrollView
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
+        Object {
+          "x": 0,
+        }
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      horizontal={true}
+      index={0}
+      loadMinimal={false}
+      loadMinimalSize={1}
+      loop={true}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#f5f5f5",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "paddingRight": 0,
+                  "paddingTop": 0,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "borderRadius": 10,
+                  "height": "45%",
+                  "overflow": "hidden",
+                  "width": "100%",
+                  "zIndex": 2,
+                }
+              }
+            >
+              <ViewManagerAdapter_ExpoVideoView
+                proxiedProperties={
+                  Object {
+                    "onError": [Function],
+                    "onFullscreenUpdate": [Function],
+                    "onLoad": [Function],
+                    "onLoadStart": [Function],
+                    "onReadyForDisplay": [Function],
+                    "onStatusUpdate": [Function],
+                    "resizeMode": "mock",
+                    "source": Object {
+                      "headers": undefined,
+                      "overridingExtension": null,
+                      "uri": "uri",
+                    },
+                    "status": Object {
+                      "isLooping": true,
+                      "isMuted": true,
+                      "shouldPlay": true,
+                    },
+                  }
+                }
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#d64547",
+                  "borderRadius": 35,
+                  "height": 50,
+                  "justifyContent": "space-around",
+                  "opacity": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text>
+                Lets Start
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#f38484",
+                  "opacity": 1,
+                  "paddingLeft": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#f38484",
+                      "fontSize": 12,
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                I am an organization/company
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "paddingTop": "75%",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Array [
+                  Object {
+                    "height": 77,
+                    "width": 66,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#f38484",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "paddingTop": 42,
+                  },
+                ]
+              }
+            >
+              Welcome to Dandle
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#f38484",
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                    "paddingBottom": 10,
+                    "paddingTop": 5,
+                  },
+                ]
+              }
+            >
+              Swipe to see how it works
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#d64547",
+                  "borderRadius": 35,
+                  "height": 50,
+                  "justifyContent": "space-around",
+                  "opacity": 1,
+                  "width": "90%",
+                }
+              }
+            >
+              <Text>
+                Continue
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#f38484",
+                  "opacity": 1,
+                  "paddingLeft": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#f38484",
+                      "fontSize": 12,
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                I am an organization/company
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#f5f5f5",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "paddingRight": 0,
+                  "paddingTop": 0,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "borderRadius": 10,
+                  "height": "45%",
+                  "overflow": "hidden",
+                  "width": "100%",
+                  "zIndex": 2,
+                }
+              }
+            >
+              <ViewManagerAdapter_ExpoVideoView
+                proxiedProperties={
+                  Object {
+                    "onError": [Function],
+                    "onFullscreenUpdate": [Function],
+                    "onLoad": [Function],
+                    "onLoadStart": [Function],
+                    "onReadyForDisplay": [Function],
+                    "onStatusUpdate": [Function],
+                    "resizeMode": "mock",
+                    "source": Object {
+                      "headers": undefined,
+                      "overridingExtension": null,
+                      "uri": "uri",
+                    },
+                    "status": Object {
+                      "isLooping": true,
+                      "isMuted": true,
+                      "shouldPlay": true,
+                    },
+                  }
+                }
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#d64547",
+                  "borderRadius": 35,
+                  "height": 50,
+                  "justifyContent": "space-around",
+                  "opacity": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text>
+                Lets Start
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#f38484",
+                  "opacity": 1,
+                  "paddingLeft": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#f38484",
+                      "fontSize": 12,
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                I am an organization/company
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "paddingTop": "75%",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Array [
+                  Object {
+                    "height": 77,
+                    "width": 66,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#f38484",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "paddingTop": 42,
+                  },
+                ]
+              }
+            >
+              Welcome to Dandle
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#f38484",
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                    "paddingBottom": 10,
+                    "paddingTop": 5,
+                  },
+                ]
+              }
+            >
+              Swipe to see how it works
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#d64547",
+                  "borderRadius": 35,
+                  "height": 50,
+                  "justifyContent": "space-around",
+                  "opacity": 1,
+                  "width": "90%",
+                }
+              }
+            >
+              <Text>
+                Continue
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 45,
+                  },
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#f38484",
+                  "opacity": 1,
+                  "paddingLeft": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#f38484",
+                      "fontSize": 12,
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                I am an organization/company
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#007aff",
+              "borderRadius": 4,
+              "height": 8,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 8,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,.2)",
+              "borderRadius": 4,
+              "height": 8,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 8,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

@@ -11,7 +11,11 @@ export const colors = {
     textLink: '#f38484',
     textLight: '#f5f5f5',
     textDark: '#212121',
-    backgroundLight: '#f5f5f5',
+    backgroundLight: '#fafafa',
+    borderColorDark: '#9e9e9e',
+    bgWhite: '#ffffff',
+    textGrayLight: '#bdbdbd',
+    textGray: '#9e9e9e',
 };
 const { background, primary, secondary, textLink, 
         textLight, textDark, backgroundLight } = colors;
@@ -53,9 +57,10 @@ export const SignUp = styled.View`
 `;
 export const PadlessContainer = styled.View`
     flex: 1;
+    flexGrow: 2;
     width: 100%;
     background-color: ${backgroundLight};
-    align-items: center;
+    align-self: center;
     padding: 24px;
     paddingTop:25%;
 `;
