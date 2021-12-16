@@ -35,10 +35,10 @@ exports[`OrgSignUp renders correctly 1`] = `
           style={
             Array [
               Object {
-                "alignItems": "center",
+                "alignSelf": "center",
                 "backgroundColor": "#f5f5f5",
                 "flexBasis": 0,
-                "flexGrow": 1,
+                "flexGrow": 2,
                 "flexShrink": 1,
                 "paddingBottom": 24,
                 "paddingLeft": 24,
