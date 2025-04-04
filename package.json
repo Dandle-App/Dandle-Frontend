@@ -37,7 +37,7 @@
     "react-native-safe-area-view": "github:react-native-community/react-native-safe-area-view",
     "react-native-screens": "~3.22.0",
     "react-native-swiper": "^1.6.0",
-    "react-native-web": "~0.19.6",
+    "react-native-web": "~0.20.0",
     "react-redux": "^7.2.5",
     "react-test-renderer": "^17.0.2",
     "socket.io-client": "^4.3.2",
